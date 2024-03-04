@@ -1,0 +1,27 @@
+# ninja log v5
+67	1683	7057003763130121	CMakeFiles/Laborator_8_9.dir/validare.cpp.obj	653dced0fab16873
+2	329	7053455779318419	CMakeFiles/Laborator_8_9.dir/domain.cpp.obj	2ab81fcae497f85b
+8	533	7057137607635627	CMakeFiles/Laborator_8_9.dir/repository.cpp.obj	e3c9000aa8805e3c
+6	1343	7057003759787666	CMakeFiles/Laborator_8_9.dir/exceptions.cpp.obj	1cbadd667c386ec0
+3	814	7059417486107704	CMakeFiles/Laborator_8_9.dir/main.cpp.obj	e83e6f9257bcb27
+5	904	7057137611338232	CMakeFiles/Laborator_8_9.dir/tests.cpp.obj	7bd3819d5a184a9e
+12	2136	7057014838785093	CMakeFiles/Laborator_8_9.dir/ui.cpp.obj	57130238d1e4a0e9
+19	2894	7057014846374865	CMakeFiles/Laborator_8_9.dir/service.cpp.obj	85587063e9233403
+814	1207	7059417490025039	Laborator_8_9.exe	86b2bea4a04591ab
+75	2883	7057003775216070	CMakeFiles/Laborator_8_9.dir/Contract.cpp.obj	e6ae4ee47d7e9705
+17	700	7056822181426572	CMakeFiles/Laborator_8_9.dir/FileContract.cpp.obj	ad9aafdd489a851
+82	2169	7057003768055633	CMakeFiles/Laborator_8_9.dir/repositoryFile.cpp.obj	57de495deb3108aa
+33	1383	7057014831260385	CMakeFiles/Laborator_8_9.dir/undo.cpp.obj	a4487bc804ab182e
+0	245	7061003330481236	build.ninja	21d8e09a7437d82c
+8	851	7061003339808438	CMakeFiles/Laborator_8_9.dir/domain.cpp.obj	2ab81fcae497f85b
+56	1048	7061003341948569	CMakeFiles/Laborator_8_9.dir/exceptions.cpp.obj	1cbadd667c386ec0
+18	1217	7061003343841248	CMakeFiles/Laborator_8_9.dir/validare.cpp.obj	653dced0fab16873
+96	1404	7061003345710237	CMakeFiles/Laborator_8_9.dir/undo.cpp.obj	a4487bc804ab182e
+3	1551	7061003347185419	CMakeFiles/Laborator_8_9.dir/repository.cpp.obj	e3c9000aa8805e3c
+84	1562	7061003347297139	CMakeFiles/Laborator_8_9.dir/repositoryFile.cpp.obj	57de495deb3108aa
+62	2004	7061003351728995	CMakeFiles/Laborator_8_9.dir/main.cpp.obj	e83e6f9257bcb27
+50	2081	7061003352521802	CMakeFiles/Laborator_8_9.dir/Contract.cpp.obj	e6ae4ee47d7e9705
+13	2172	7061003353126362	CMakeFiles/Laborator_8_9.dir/ui.cpp.obj	57130238d1e4a0e9
+39	2405	7061003355749365	CMakeFiles/Laborator_8_9.dir/tests.cpp.obj	7bd3819d5a184a9e
+44	2655	7061003358229742	CMakeFiles/Laborator_8_9.dir/service.cpp.obj	85587063e9233403
+2655	2944	7061003361086506	Laborator_8_9.exe	86b2bea4a04591ab

@@ -1,0 +1,40 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_6_7/exceptions.cpp
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_6_7\cmake-build-debug-coverage\CMakeFiles\Laborator_6_7.dir\exceptions.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_6_7\cmake-build-debug-coverage\CMakeFiles\Laborator_6_7.dir\exceptions.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "exceptions.h"
+        -:    2:
+function _ZN13RepoException8getMesajB5cxx11Ev called 3 returned 100% blocks executed 100%
+        3:    3:string RepoException::getMesaj() {
+        3:    4:    return mesaj;
+        3:    4-block  0
+call    0 returned 3
+        -:    5:}
+        -:    6:
+function _ZlsRSoRK17ValidateException called 1 returned 100% blocks executed 100%
+        1:    7:ostream& operator << (ostream& out, const ValidateException& ex) {
+        3:    8:    for (const auto& msg : ex.mesaje) {
+        1:    8-block  0
+call    0 returned 1
+call    1 returned 1
+        2:    8-block  1
+call    2 returned 2
+        2:    8-block  2
+call    3 returned 2
+        3:    8-block  3
+call    4 returned 3
+branch  5 taken 2
+branch  6 taken 1 (fallthrough)
+        2:    9:        out << msg << " ";
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:    9-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   10:    }
+        1:   11:    return out;
+        1:   11-block  0
+        1:   11-block  1
+        -:   12:}

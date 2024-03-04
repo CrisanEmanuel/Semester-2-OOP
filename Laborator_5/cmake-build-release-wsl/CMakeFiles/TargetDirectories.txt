@@ -1,0 +1,3 @@
+/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_5/cmake-build-release-wsl/CMakeFiles/Laborator_5.dir
+/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_5/cmake-build-release-wsl/CMakeFiles/edit_cache.dir
+/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_5/cmake-build-release-wsl/CMakeFiles/rebuild_cache.dir

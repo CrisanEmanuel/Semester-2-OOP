@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Simulare",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Simulare::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Simulare-Debug-6f4af5859e15f45f36c7.json",
+					"name" : "Simulare",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Simulare_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Simulare_autogen-Debug-33d63242463da8d9ac02.json",
+					"name" : "Simulare_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Simulare_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Simulare_autogen_timestamp_deps-Debug-c0f7e690c1d4b14a6fc4.json",
+					"name" : "Simulare_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/EMANUEL/Desktop/OOP/Simulare/cmake-build-debug",
+		"source" : "C:/Users/EMANUEL/Desktop/OOP/Simulare"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

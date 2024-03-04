@@ -1,0 +1,55 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/main.cpp
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "repository.h"
+        -:    2:#include "service.h"
+        -:    3:#include "ui.h"
+        -:    4:#include "tests.h"
+        -:    5:#include "Contract.h"
+        -:    6:#include "repositoryFile.h"
+        -:    7:
+function main called 1 returned 100% blocks executed 61%
+        1:    8:int main(){
+        -:    9:
+        1:   10:    Repo repo;
+        1:   10-block  0
+call    0 returned 1
+        2:   11:    RepoFile repoFile("discipline.txt");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   11-block  0
+call    4 returned 1
+call    5 returned 1
+    $$$$$:   11-block  1
+        1:   12:    Contract contract;
+call    0 returned 1
+        1:   13:    Service service(repoFile, contract);
+call    0 returned 1
+        1:   14:    Ui ui(service);
+call    0 returned 1
+        -:   15:
+        1:   16:    Tests::runAllTeste();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   17:
+        -:   18://    Ui::menu();
+        -:   19://    ui.runUi();
+        1:   20:    return 0;
+        1:   21:}
+        1:   21-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   21-block  1
+call    4 never executed
+    $$$$$:   21-block  2
+call    5 never executed
+    $$$$$:   21-block  3
+call    6 never executed
+    $$$$$:   21-block  4
+call    7 never executed

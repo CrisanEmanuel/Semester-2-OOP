@@ -1,0 +1,7 @@
+# ninja log v5
+14	62	7030226243039779	CMakeFiles/Laborator_5.dir/mysort.c.obj	7cb7dff59506e51
+5	69	7030226243119767	CMakeFiles/Laborator_5.dir/domain.c.obj	543cde5bc73b20d9
+1	55	7030228937618749	CMakeFiles/Laborator_5.dir/main.c.obj	94f7cf390e583ff0
+8	76	7030226243189783	CMakeFiles/Laborator_5.dir/repository.c.obj	45201c1b8058217d
+11	82	7030226243259752	CMakeFiles/Laborator_5.dir/service.c.obj	710d29e8312a54d2
+55	123	7030228938268749	Laborator_5.exe	7b955c6fd53159ed

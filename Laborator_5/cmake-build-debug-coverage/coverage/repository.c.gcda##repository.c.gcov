@@ -1,0 +1,200 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_5/repository.c
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_5\cmake-build-debug-coverage\CMakeFiles\Laborator_5.dir\repository.c.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_5\cmake-build-debug-coverage\CMakeFiles\Laborator_5.dir\repository.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "domain.h"
+        -:    2:#include "repository.h"
+        -:    3:#include <stdlib.h>
+        -:    4:#include <assert.h>
+        -:    5:
+        -:    6://creare lista goala
+function createEmpty called 26 returned 100% blocks executed 100%
+       26:    7:CarList* createEmpty(DestroyFunction destf){
+       26:    8:    CarList* rez = malloc(sizeof(CarList));
+       26:    9:    rez->lg = 0;
+       26:   10:    rez->cap = 2;
+       26:   11:    rez->elems = malloc(sizeof(Car) * rez->cap);
+       26:   12:    rez->destf = destf;
+       26:   13:    return rez;
+       26:   13-block  0
+        -:   14:}
+        -:   15:
+function destroy called 25 returned 100% blocks executed 100%
+       25:   16:void destroy(CarList* l){
+       76:   17:    for (int i = 0; i < l->lg; i++){
+       25:   17-block  0
+       76:   17-block  1
+branch  0 taken 51
+branch  1 taken 25 (fallthrough)
+       51:   18:        l->destf(l->elems[i]);
+       51:   18-block  0
+call    0 returned 51
+        -:   19:    }
+       25:   20:    free(l->elems);
+       25:   21:    free(l);
+       25:   22:}
+        -:   23:
+function get called 82 returned 100% blocks executed 100%
+       82:   24:ElemType get(CarList* l, int poz){
+       82:   25:    return l->elems[poz];
+       82:   25-block  0
+        -:   26:}
+        -:   27:
+function set called 27 returned 100% blocks executed 100%
+       27:   28:ElemType set(CarList* l, int poz, Car* c){
+       27:   29:    ElemType rez = l->elems[poz];
+       27:   30:    l->elems[poz] = c;
+       27:   31:    return rez;
+       27:   31-block  0
+        -:   32:}
+        -:   33:
+function size called 110 returned 100% blocks executed 100%
+      110:   34:int size(CarList* l){
+      110:   35:    return l->lg;
+      110:   35-block  0
+        -:   36:}
+        -:   37:
+        -:   38://asigurare capacitate, 0 daca nu exista spatiu si 1 altfel
+function ensureCapacity called 56 returned 100% blocks executed 100%
+       56:   39:void ensureCapacity(CarList* l){
+       56:   40:    if (l->lg < l->cap) return;
+       56:   40-block  0
+branch  0 taken 44 (fallthrough)
+branch  1 taken 12
+       44:   40-block  1
+        -:   41:
+        -:   42:    //alocare memorie
+       12:   43:    ElemType* nElems = malloc(sizeof(ElemType) * (l->cap + 2));
+        -:   44:
+        -:   45:    //copiere elemente
+       46:   46:    for (int i = 0; i < l->lg; i++)
+       12:   46-block  0
+       46:   46-block  1
+branch  0 taken 34
+branch  1 taken 12 (fallthrough)
+       34:   47:        nElems[i] = l->elems[i];
+       34:   47-block  0
+        -:   48:
+        -:   49:    //dealocare tablou vechi
+       12:   50:    free(l->elems);
+       12:   51:    l->elems = nElems;
+       12:   52:    l->cap += 2;
+       12:   52-block  0
+        -:   53:}
+        -:   54:
+        -:   55://adauga masina la lista
+function add called 56 returned 100% blocks executed 100%
+       56:   56:void add(CarList* l, ElemType el){
+       56:   57:    ensureCapacity(l);
+       56:   57-block  0
+call    0 returned 56
+       56:   58:    l->elems[l->lg] = el;
+       56:   59:    l->lg++;
+       56:   60:}
+        -:   61:
+function copyList called 15 returned 100% blocks executed 100%
+       15:   62:CarList* copyList(CarList* l, CopyFunction cf) {
+       15:   63:    CarList* rez = createEmpty(l->destf);
+       15:   63-block  0
+call    0 returned 15
+       43:   64:    for (int i = 0; i < size(l); i++){
+       43:   64-block  0
+call    0 returned 43
+branch  1 taken 28
+branch  2 taken 15 (fallthrough)
+       28:   65:        ElemType c = get(l, i);
+       28:   65-block  0
+call    0 returned 28
+       28:   66:        add(rez, cf(c));
+call    0 returned 28
+call    1 returned 28
+        -:   67:    }
+       15:   68:    return rez;
+       15:   68-block  0
+        -:   69:}
+        -:   70:
+function removeLast called 3 returned 100% blocks executed 100%
+        3:   71:ElemType removeLast(CarList* l){
+        3:   72:    ElemType rez = l->elems[l->lg - 1];
+        3:   73:    l->lg -= 1;
+        3:   74:    return rez;
+        3:   74-block  0
+        -:   75:}
+        -:   76:
+function testeLista called 1 returned 100% blocks executed 76%
+        1:   77:void testeLista() {
+        1:   78:    CarList* store = createEmpty((DestroyFunction) destroyCar);
+        1:   78-block  0
+call    0 returned 1
+        1:   79:    CarList* l = createEmpty((DestroyFunction) destroyCar);
+call    0 returned 1
+       1*:   80:    assert(size(l) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   80-block  0
+call    3 never executed
+        1:   80-block  1
+        1:   81:    add(store, createCar("B100LYA", "Ford", "Break", 0));
+        1:   81-block  0
+call    0 returned 1
+call    1 returned 1
+       1*:   82:    assert(size(store) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   82-block  0
+call    3 never executed
+        1:   82-block  1
+        1:   83:    destroy(store);
+        1:   83-block  0
+call    0 returned 1
+        1:   84:    destroy(l);
+call    0 returned 1
+        1:   85:}
+        -:   86:
+function testListeDeListe called 1 returned 100% blocks executed 82%
+        1:   87:void testListeDeListe() {
+        1:   88:    CarList* myCars1 = createEmpty((DestroyFunction) destroyCar);
+        1:   88-block  0
+call    0 returned 1
+        1:   89:    add(myCars1, createCar("ab45rtl", "aaa", "dfgh", 0) );
+call    0 returned 1
+call    1 returned 1
+        1:   90:    add(myCars1, createCar("ab55der", "bbb", "qwer", 0) );
+call    0 returned 1
+call    1 returned 1
+        -:   91:
+        1:   92:    CarList* myCars2 = createEmpty((DestroyFunction) destroyCar);
+call    0 returned 1
+        1:   93:    CarList* undoL = createEmpty((DestroyFunction) destroyCar);
+call    0 returned 1
+        -:   94:
+        1:   95:    add(undoL, myCars1);
+call    0 returned 1
+       1*:   96:    assert(size(undoL) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   96-block  0
+call    3 never executed
+        1:   96-block  1
+        -:   97:
+        1:   98:    add(undoL, myCars2);
+        1:   98-block  0
+call    0 returned 1
+       1*:   99:    assert(size(undoL) == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   99-block  0
+call    3 never executed
+        1:   99-block  1
+        -:  100:
+        1:  101:    destroy(myCars1);
+        1:  101-block  0
+call    0 returned 1
+        1:  102:    destroy(myCars2);
+call    0 returned 1
+        1:  103:}
+        -:  104:

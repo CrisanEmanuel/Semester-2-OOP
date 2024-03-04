@@ -1,0 +1,10 @@
+1431 Jupiter SistemSolar 14000 5000
+5699 Saturn Drago 4500 12333
+1234 Marte SistemSolar 12323 2345
+9003 Pluto Drago 12334 9000
+1455 Venus SistemSolar 9312 4234
+4323 Pamant3 SistemSolar4 123 2711
+4123 Pamant2 SistemSolar2 6544 6411
+2323 Pamant4 SistemSolar3 444 23411
+5233 Pamant5 SistemSolar1 6434 9054
+1233 Pamant1 SistemSolar5 876 4524

@@ -1,0 +1,233 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/repository.cpp
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\repository.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "repository.h"
+        -:    2:
+function _ZN4Repo7addRepoERK10Disciplina called 19 returned 95% blocks executed 73%
+       19:    3:void Repo::addRepo(const Disciplina& disciplina) {
+       42:    4:    for (const auto& d: discipline) {
+       19:    4-block  0
+call    0 returned 19
+call    1 returned 19
+       24:    4-block  1
+call    2 returned 24
+       23:    4-block  2
+call    3 returned 23
+       42:    4-block  3
+call    4 returned 42
+branch  5 taken 24
+branch  6 taken 18 (fallthrough)
+       24:    5:        if (d.getDenumire() == disciplina.getDenumire()) {
+call    0 returned 24
+branch  1 taken 24 (fallthrough)
+branch  2 taken 0 (throw)
+       24:    5-block  0
+call    3 returned 24
+branch  4 taken 24 (fallthrough)
+branch  5 taken 0 (throw)
+       24:    5-block  1
+call    6 returned 24
+call    7 returned 24
+call    8 returned 24
+branch  9 taken 1 (fallthrough)
+branch 10 taken 23
+    $$$$$:    5-block  2
+call   11 never executed
+    $$$$$:    5-block  3
+        1:    6:            throw RepoException("Disciplina deja existenta!\n");
+        1:    6-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:    6-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:    6-block  2
+call    9 never executed
+    $$$$$:    6-block  3
+    $$$$$:    6-block  4
+call   10 never executed
+        -:    7:        }
+        -:    8:    }
+       18:    9:    discipline.push_back(disciplina);
+       18:    9-block  0
+call    0 returned 18
+       18:   10:}
+        -:   11:
+function _ZN4Repo10deleteRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 46%
+        7:   12:void Repo::deleteRepo(const string& denumire) {
+function _ZZN4Repo10deleteRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK10DisciplinaE_clESA_ called 11 returned 100% blocks executed 100%
+        7:   13:    auto it = std::find_if(discipline.begin(), discipline.end(), [&] (const Disciplina& d) {
+        7:   13-block  0
+call    0 returned 7
+call    1 returned 7
+call    2 returned 7
+branch  3 taken 7 (fallthrough)
+branch  4 taken 0 (throw)
+       11:   14:        return d.getDenumire() == denumire;
+       11:   14-block  0
+call    0 returned 11
+call    1 returned 11
+call    2 returned 11
+        -:   15:    });
+        7:   16:    if(it != discipline.end()){
+        7:   16-block  0
+call    0 returned 7
+call    1 returned 7
+branch  2 taken 7 (fallthrough)
+branch  3 taken 0
+        7:   17:        discipline.erase(it);
+        7:   17-block  0
+call    0 returned 7
+call    1 returned 7
+branch  2 taken 7 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   17-block  1
+        7:   18:        return;
+        7:   18-block  0
+        7:   18-block  1
+        -:   19:    }
+    #####:   20:    throw RepoException("Disciplina inexistenta!\n");
+    %%%%%:   20-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   20-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   20-block  2
+call    9 never executed
+    $$$$$:   20-block  3
+    $$$$$:   20-block  4
+call   10 never executed
+        -:   21:
+        -:   22:}
+        -:   23:
+function _ZN4Repo10updateRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK10Disciplina called 4 returned 100% blocks executed 48%
+        4:   24:void Repo::updateRepo(const string& denumire, const Disciplina& disciplinaNoua) {
+function _ZZN4Repo10updateRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK10DisciplinaENKUlSA_E_clESA_ called 6 returned 100% blocks executed 100%
+        4:   25:    auto it = std::find_if(discipline.begin(), discipline.end(), [&](const Disciplina &d) {
+        4:   25-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+branch  3 taken 4 (fallthrough)
+branch  4 taken 0 (throw)
+        6:   26:        return d.getDenumire() == denumire;
+        6:   26-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+        -:   27:    });
+        -:   28:
+        4:   29:    if (it != discipline.end()) {
+        4:   29-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0
+        4:   30:        discipline.erase(it);
+        4:   30-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   30-block  1
+        4:   31:        discipline.insert(it, disciplinaNoua);
+        4:   31-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   31-block  1
+        4:   32:        return;
+        4:   32-block  0
+        4:   32-block  1
+        -:   33:    }
+    #####:   34:    throw RepoException("Disciplina inexistenta!\n");
+    %%%%%:   34-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   34-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   34-block  2
+call    9 never executed
+    $$$$$:   34-block  3
+    $$$$$:   34-block  4
+call   10 never executed
+        -:   35:    
+        -:   36:}
+        -:   37:
+function _ZN4Repo10searchRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 14 returned 71% blocks executed 72%
+       14:   38:Disciplina Repo::searchRepo(const std::string &denumire) {
+function _ZZN4Repo10searchRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK10DisciplinaE_clESA_ called 18 returned 100% blocks executed 100%
+       14:   39:    auto it = std::find_if(discipline.begin(), discipline.end(), [&] (const Disciplina& d) {
+       14:   39-block  0
+call    0 returned 14
+call    1 returned 14
+call    2 returned 14
+branch  3 taken 14 (fallthrough)
+branch  4 taken 0 (throw)
+       18:   40:        return d.getDenumire() == denumire;
+       18:   40-block  0
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+        -:   41:    });
+       14:   42:    if(it != discipline.end())
+       14:   42-block  0
+call    0 returned 14
+call    1 returned 14
+branch  2 taken 10 (fallthrough)
+branch  3 taken 4
+        -:   43:    {
+       10:   44:        Disciplina d = *it;
+       10:   44-block  0
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0 (throw)
+       20:   45:        return d;
+       10:   45-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   45-block  1
+       10:   46:    }
+       10:   46-block  0
+call    0 returned 10
+    $$$$$:   46-block  1
+call    1 never executed
+        4:   47:    throw RepoException("Disciplina inexistenta!\n");
+        4:   47-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+branch  3 taken 4 (fallthrough)
+branch  4 taken 0 (throw)
+        4:   47-block  1
+call    5 returned 4
+call    6 returned 4
+call    7 returned 4
+call    8 returned 4
+    $$$$$:   47-block  2
+call    9 never executed
+    $$$$$:   47-block  3
+    $$$$$:   47-block  4
+call   10 never executed
+        -:   48:}

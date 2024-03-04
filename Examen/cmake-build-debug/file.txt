@@ -1,0 +1,15 @@
+1 descriere1 Ion1 Ion2 open
+2 descriere2 Marius1 Marius2 closed
+3 descriere3 Mircea1 Mircea2 inprogress
+4 descriere4 Raul1 Raul2 closed
+5 descriere5 Gheorghe1 Gheorghe1 inprogress
+6 descriere6 John1 John2 open
+7 descriere7 Andrei1 Andrei2 inprogress
+8 descriere8 Robert1 Robert2 inprogress
+9 descriere9 Tudor1 Tudor2 closed
+10 descriere10 Emanuel1 Emanuel2 closed
+11 descriere11 Marian1 Marian2 open
+12 descriere12 Adrian1 Adrian2 closed
+13 descriere13 Adi1 Adi2 closed
+14 descriere14 Ana Vasile closed
+15 descriere15 Ana1 Ana1 closed

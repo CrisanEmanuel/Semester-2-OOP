@@ -1,0 +1,89 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/domain.h
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:#include <utility>
+        -:    4:#include <iostream>
+        -:    5:
+        -:    6:using std::string;
+        -:    7:
+        -:    8:class Disciplina {
+        -:    9:
+        -:   10:private:
+        -:   11:    string denumire;
+        -:   12:    int ore{};
+        -:   13:    string tip;
+        -:   14:    string profesor;
+        -:   15:
+        -:   16:public:
+        -:   17:
+function _ZN10DisciplinaC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS5_S5_ called 23 returned 100% blocks executed 100%
+       23:   18:    Disciplina(string denumire, int orePeSaptamana, string tip, string profesor) :denumire{ std::move(denumire) }, ore{ orePeSaptamana }, tip{ std::move(tip) }, profesor{ std::move(profesor) } {}
+       23:   18-block  0
+call    0 returned 23
+call    1 returned 23
+call    2 returned 23
+call    3 returned 23
+call    4 returned 23
+call    5 returned 23
+        -:   19:
+function _ZN10DisciplinaC1ERKS_ called 0 returned 0% blocks executed 0%
+    #####:   20:    Disciplina(const Disciplina& d):denumire{ d.getDenumire() }, ore { d.ore }, tip { d.tip }, profesor { d.profesor }{
+    %%%%%:   20-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   20-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   21:    }
+    %%%%%:   21-block  0
+    $$$$$:   21-block  1
+call    0 never executed
+    $$$$$:   21-block  2
+call    1 never executed
+        -:   22:
+        -:   23:    Disciplina() = default;
+        -:   24:
+    #####:   25:    virtual ~Disciplina() = default;
+------------------
+_ZN10DisciplinaD0Ev:
+function _ZN10DisciplinaD0Ev called 0 returned 0% blocks executed 0%
+    #####:   25:    virtual ~Disciplina() = default;
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN10DisciplinaD1Ev:
+function _ZN10DisciplinaD1Ev called 0 returned 0% blocks executed 0%
+    #####:   25:    virtual ~Disciplina() = default;
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+------------------
+        -:   26:
+        -:   27:    [[nodiscard]] int getOrePeSaptamana() const;
+        -:   28:
+        -:   29:    [[nodiscard]] string getDenumire() const;
+        -:   30:
+        -:   31:    [[nodiscard]] string getTip() const;
+        -:   32:
+        -:   33:    [[nodiscard]] string getProfesor() const;
+        -:   34:
+        -:   35:    void setDenumire(const string& denumireNoua);
+        -:   36:
+        -:   37:    void setOrePeSaptamana(int nrOreNou);
+        -:   38:
+        -:   39:    void setTip(const string& tipNou);
+        -:   40:
+        -:   41:    void setProfesor(const string& profesorNou);
+        -:   42:
+        -:   43:    static bool cmpDenumire(const Disciplina& d1, const Disciplina& d2);
+        -:   44:
+        -:   45:    static bool cmpNrOre(const Disciplina& d1, const Disciplina& d2);
+        -:   46:};

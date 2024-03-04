@@ -1,0 +1,72 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/undo.h
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "domain.h"
+        -:    3:#include "repositoryFile.h"
+        -:    4:
+        -:    5:class ActiuneUndo {
+        -:    6:public:
+        -:    7:    virtual void doUndo() = 0;
+function _ZN11ActiuneUndoD2Ev called 25 returned 100% blocks executed 100%
+       25:    8:    virtual ~ActiuneUndo() = default;
+        -:    9:};
+        -:   10:
+        -:   11:class UndoAdauga: public ActiuneUndo {
+        -:   12:    Disciplina disciplinaAdaugata;
+        -:   13:    Repo &repo;
+        -:   14:public:
+function _ZN10UndoAdaugaC1ER4RepoRK10Disciplina called 16 returned 100% blocks executed 80%
+       16:   15:    UndoAdauga(Repo& repo, const Disciplina& d): repo { repo }, disciplinaAdaugata { d }{}
+       16:   15-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0 (throw)
+       16:   15-block  1
+    $$$$$:   15-block  2
+call    4 never executed
+        -:   16:    void doUndo() override;
+        -:   17:};
+        -:   18:
+        -:   19:class UndoSterge: public ActiuneUndo {
+        -:   20:    Disciplina disciplinaStearsa;
+        -:   21:    Repo &repo;
+        -:   22:public:
+function _ZN10UndoStergeC1ER4RepoRK10Disciplina called 6 returned 100% blocks executed 80%
+        6:   23:    UndoSterge(Repo& repo, const Disciplina& d): repo { repo }, disciplinaStearsa { d }{}
+        6:   23-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   23-block  1
+    $$$$$:   23-block  2
+call    4 never executed
+        -:   24:    void doUndo() override;
+        -:   25:};
+        -:   26:
+        -:   27:class UndoModifica: public ActiuneUndo {
+        -:   28:    Disciplina disciplinaNoua;
+        -:   29:    Disciplina disciplinaVeche;
+        -:   30:    Repo &repo;
+        -:   31:public:
+function _ZN12UndoModificaC1ER4RepoRK10DisciplinaS4_ called 3 returned 100% blocks executed 62%
+        3:   32:    UndoModifica(Repo& repo, const Disciplina& disNoua, const Disciplina& disVeche): repo { repo }, disciplinaNoua { disNoua }, disciplinaVeche { disVeche }{}
+        3:   32-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   32-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   32-block  2
+    $$$$$:   32-block  3
+call    7 never executed
+    $$$$$:   32-block  4
+call    8 never executed
+        -:   33:    void doUndo() override;
+        -:   34:};

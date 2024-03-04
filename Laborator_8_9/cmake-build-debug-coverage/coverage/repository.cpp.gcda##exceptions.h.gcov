@@ -1,0 +1,46 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/exceptions.h
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\repository.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:#include <sstream>
+        -:    4:#include <utility>
+        -:    5:#include <vector>
+        -:    6:
+        -:    7:using std::string;
+        -:    8:using std::vector;
+        -:    9:using std::ostream;
+        -:   10:
+        -:   11:using std::string;
+        -:   12:
+        -:   13:class RepoException:public std::exception{
+        -:   14:    string mesaj;
+        -:   15:public:
+function _ZN13RepoExceptionC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 100%
+        7:   16:    explicit RepoException(string mesaj): mesaj { std::move(mesaj) }{}
+        7:   16-block  0
+call    0 returned 7
+call    1 returned 7
+call    2 returned 7
+        -:   17:
+        -:   18:    string getMesaj();
+        -:   19:};
+        -:   20:
+        -:   21:class ServiceException: public std::exception {
+        -:   22:    string mesaj;
+        -:   23:public:
+        -:   24:    explicit ServiceException(string mesaj): mesaj { std::move(mesaj) }{}
+        -:   25:
+        -:   26:    string getMesaj();
+        -:   27:};
+        -:   28:
+        -:   29:class ValidateException:public std::exception {
+        -:   30:    vector<string> mesaje;
+        -:   31:public:
+        -:   32:    explicit ValidateException(const vector<string>& errors) :mesaje{ errors } {}
+        -:   33:    // functie friend (vreau sa folosesc membru privat mesaje)
+        -:   34:    friend ostream& operator << (ostream& out, const ValidateException& ex);
+        -:   35:};
+        -:   36:
+        -:   37:ostream& operator << (ostream& out, const ValidateException& ex);

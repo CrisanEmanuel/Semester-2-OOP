@@ -1,0 +1,3 @@
+C:/Users/EMANUEL/Desktop/OOP/Laborator_2-4/cmake-build-debug/CMakeFiles/Laborator_2_4.dir
+C:/Users/EMANUEL/Desktop/OOP/Laborator_2-4/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/EMANUEL/Desktop/OOP/Laborator_2-4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

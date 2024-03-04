@@ -1,0 +1,9 @@
+# ninja log v5
+25	186	7012644159166018	CMakeFiles/Laborator_2_4.dir/domain.c.obj	c09e4ef18f03f2c4
+1	189	7012644159125980	CMakeFiles/Laborator_2_4.dir/main.c.obj	c0bbfef5757f9658
+51	199	7012644159309507	CMakeFiles/Laborator_2_4.dir/validate.c.obj	217fad420cccb7cf
+19	206	7012644159379466	CMakeFiles/Laborator_2_4.dir/tests.c.obj	fded3856126b85d9
+32	223	7012644159561146	CMakeFiles/Laborator_2_4.dir/service.c.obj	a338482f48a9c60d
+40	265	7012644159991145	CMakeFiles/Laborator_2_4.dir/ui.c.obj	435617c99b1a73a7
+11	285	7012644160193257	CMakeFiles/Laborator_2_4.dir/repo.c.obj	fdf95e3cf9999707
+285	447	7012644161748848	Laborator_2_4.exe	5fe64bdaf2e52419

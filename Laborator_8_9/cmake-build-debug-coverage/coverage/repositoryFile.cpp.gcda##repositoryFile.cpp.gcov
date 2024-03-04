@@ -1,0 +1,155 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/repositoryFile.cpp
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\repositoryFile.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\repositoryFile.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "repositoryFile.h"
+        -:    2:
+function _ZN8RepoFile11writeToFileEv called 13 returned 100% blocks executed 60%
+       13:    3:void RepoFile::writeToFile() {
+       13:    4:    std::ofstream out(fileName);
+       13:    4-block  0
+call    0 returned 13
+branch  1 taken 13 (fallthrough)
+branch  2 taken 0 (throw)
+       13:    5:    if (!out.is_open()) {
+       13:    5-block  0
+call    0 returned 13
+branch  1 taken 13 (fallthrough)
+branch  2 taken 0 (throw)
+       13:    5-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 13
+    #####:    6:        throw RepoException("Nu se poate deschide: " + fileName);
+    %%%%%:    6-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:    6-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+    $$$$$:    6-block  2
+call    7 never executed
+        -:    7:    }
+       13:    8:    auto discipline = Repo::getAll();
+       13:    8-block  0
+call    0 returned 13
+call    1 returned 13
+branch  2 taken 13 (fallthrough)
+branch  3 taken 0 (throw)
+       34:    9:    for(const auto &d: discipline){
+       13:    9-block  0
+call    0 returned 13
+call    1 returned 13
+       21:    9-block  1
+call    2 returned 21
+       34:    9-block  2
+call    3 returned 34
+branch  4 taken 21
+branch  5 taken 13 (fallthrough)
+       21:   10:        out << d.getDenumire() << ',' << d.getOrePeSaptamana() << ',';
+call    0 returned 21
+branch  1 taken 21 (fallthrough)
+branch  2 taken 0 (throw)
+       21:   10-block  0
+call    3 returned 21
+branch  4 taken 21 (fallthrough)
+branch  5 taken 0 (throw)
+       21:   10-block  1
+call    6 returned 21
+branch  7 taken 21 (fallthrough)
+branch  8 taken 0 (throw)
+       21:   10-block  2
+call    9 returned 21
+branch 10 taken 21 (fallthrough)
+branch 11 taken 0 (throw)
+       21:   10-block  3
+call   12 returned 21
+branch 13 taken 21 (fallthrough)
+branch 14 taken 0 (throw)
+       21:   10-block  4
+call   15 returned 21
+branch 16 taken 21 (fallthrough)
+branch 17 taken 0 (throw)
+       21:   10-block  5
+call   18 returned 21
+    $$$$$:   10-block  6
+call   19 never executed
+    $$$$$:   10-block  7
+       21:   11:        out << d.getTip() << ',' << d.getProfesor() << std::endl;
+call    0 returned 21
+branch  1 taken 21 (fallthrough)
+branch  2 taken 0 (throw)
+       21:   11-block  0
+call    3 returned 21
+branch  4 taken 21 (fallthrough)
+branch  5 taken 0 (throw)
+       21:   11-block  1
+call    6 returned 21
+branch  7 taken 21 (fallthrough)
+branch  8 taken 0 (throw)
+       21:   11-block  2
+call    9 returned 21
+branch 10 taken 21 (fallthrough)
+branch 11 taken 0 (throw)
+       21:   11-block  3
+call   12 returned 21
+branch 13 taken 21 (fallthrough)
+branch 14 taken 0 (throw)
+       21:   11-block  4
+call   15 returned 21
+branch 16 taken 21 (fallthrough)
+branch 17 taken 0 (throw)
+       21:   11-block  5
+call   18 returned 21
+call   19 returned 21
+call   20 returned 21
+    $$$$$:   11-block  6
+call   21 never executed
+    $$$$$:   11-block  7
+    $$$$$:   11-block  8
+call   22 never executed
+    $$$$$:   11-block  9
+        -:   12:    }
+       13:   13:    out.close();
+       13:   13-block  0
+call    0 returned 13
+branch  1 taken 13 (fallthrough)
+branch  2 taken 0 (throw)
+       13:   14:}
+       13:   14-block  0
+call    0 returned 13
+call    1 returned 13
+    $$$$$:   14-block  1
+call    2 never executed
+    $$$$$:   14-block  2
+call    3 never executed
+        -:   15:
+function _ZN8RepoFile7addRepoERK10Disciplina called 8 returned 100% blocks executed 100%
+        8:   16:void RepoFile::addRepo(const Disciplina &disciplina) {
+        8:   17:    Repo::addRepo(disciplina);
+        8:   17-block  0
+call    0 returned 8
+        8:   18:    writeToFile();
+call    0 returned 8
+        8:   19:}
+        -:   20:
+function _ZN8RepoFile10deleteRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 100% blocks executed 100%
+        4:   21:void RepoFile::deleteRepo(const string &denumire) {
+        4:   22:    Repo::deleteRepo(denumire);
+        4:   22-block  0
+call    0 returned 4
+        4:   23:    writeToFile();
+call    0 returned 4
+        4:   24:}
+        -:   25:
+function _ZN8RepoFile10updateRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK10Disciplina called 1 returned 100% blocks executed 100%
+        1:   26:void RepoFile::updateRepo(const string &denumire, const Disciplina &disciplinaNoua) {
+        1:   27:    Repo::updateRepo(denumire, disciplinaNoua);
+        1:   27-block  0
+call    0 returned 1
+        1:   28:    writeToFile();
+call    0 returned 1
+        1:   29:}
+        -:   30:

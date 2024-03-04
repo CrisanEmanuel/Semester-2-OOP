@@ -1,0 +1,19 @@
+# ninja log v5
+0	88	7065466663746085	build.ninja	9c00dc97cee27c57
+4	43	7018202860460539	CMakeFiles/Laborator_2_4.dir/main.c.obj	28f5f62f1e048eec
+1	58	7018202860610545	CMakeFiles/Laborator_2_4.dir/repo.c.obj	436c5021d96fbcc1
+14	71	7018173674150479	CMakeFiles/Laborator_2_4.dir/validate.c.obj	e0d0771c6dbd7c53
+12	66	7018202860700546	CMakeFiles/Laborator_2_4.dir/service.c.obj	4cf885bee6876608
+10	77	7018202860800549	CMakeFiles/Laborator_2_4.dir/tests.c.obj	52ab2c969e2d772
+77	144	7018202861460521	Laborator_2_4.exe	a6cccbe21ccfeda8
+17	85	7018173674270457	CMakeFiles/Laborator_2_4.dir/domain.c.obj	5ae9a2318c6aeff6
+7	70	7018202860740533	CMakeFiles/Laborator_2_4.dir/ui.c.obj	f519c8e8051b2fe6
+0	197	7065466663746085	build.ninja	9c00dc97cee27c57
+2	71	7065466665079193	CMakeFiles/Laborator_2_4.dir/main.c.obj	28f5f62f1e048eec
+15	81	7065466665180588	CMakeFiles/Laborator_2_4.dir/validate.c.obj	e0d0771c6dbd7c53
+7	84	7065466665210569	CMakeFiles/Laborator_2_4.dir/domain.c.obj	5ae9a2318c6aeff6
+5	93	7065466665310581	CMakeFiles/Laborator_2_4.dir/repo.c.obj	436c5021d96fbcc1
+12	98	7065466665360566	CMakeFiles/Laborator_2_4.dir/service.c.obj	4cf885bee6876608
+10	108	7065466665470553	CMakeFiles/Laborator_2_4.dir/ui.c.obj	f519c8e8051b2fe6
+18	117	7065466665560554	CMakeFiles/Laborator_2_4.dir/tests.c.obj	52ab2c969e2d772
+117	194	7065466666313238	Laborator_2_4.exe	a6cccbe21ccfeda8

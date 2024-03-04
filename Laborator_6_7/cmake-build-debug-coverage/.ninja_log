@@ -1,0 +1,12 @@
+# ninja log v5
+31	1301	7048881257748621	CMakeFiles/Laborator_6_7.dir/validare.cpp.obj	2066e5b3c29c98cd
+10	378	7045689246569725	CMakeFiles/Laborator_6_7.dir/domain.cpp.obj	d267ca04a5eed9f1
+74	1491	7048881259662761	CMakeFiles/Laborator_6_7.dir/service.cpp.obj	af4b5ee058ffbb47
+24	469	7045689247501271	CMakeFiles/Laborator_6_7.dir/exceptions.cpp.obj	777110d55a5a944c
+41	1313	7048881257862076	CMakeFiles/Laborator_6_7.dir/main.cpp.obj	1feb763b8f7905f8
+10	445	7048444683319397	CMakeFiles/Laborator_6_7.dir/repository.cpp.obj	5cdae3b2bf6a0702
+22	1449	7048881259220650	CMakeFiles/Laborator_6_7.dir/ui.cpp.obj	d7687fcf2f16a9f1
+10	1945	7048881264171243	CMakeFiles/Laborator_6_7.dir/tests.cpp.obj	8e2a07f8a6f08629
+1945	2431	7048881268988390	Laborator_6_7.exe	12b49e92898e1c18
+1	128	7085416304420961	build.ninja	45b1c6fe71dd395e
+21	353	7048444682407299	CMakeFiles/Laborator_6_7.dir/VectorDinamicTemplate.cpp.obj	5880987ae11e69da

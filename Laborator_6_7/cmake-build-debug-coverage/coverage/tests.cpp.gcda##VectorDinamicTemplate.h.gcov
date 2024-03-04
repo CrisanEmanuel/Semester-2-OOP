@@ -1,0 +1,730 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_6_7/VectorDinamicTemplate.h
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_6_7\cmake-build-debug-coverage\CMakeFiles\Laborator_6_7.dir\tests.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_6_7\cmake-build-debug-coverage\CMakeFiles\Laborator_6_7.dir\tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma "once"
+        -:    2:#include <cassert>
+        -:    3:#include <iostream>
+        -:    4:
+        -:    5:#define INITIAL_CAPACITY 5
+        -:    6:
+        -:    7:template <typename ElementT>
+        -:    8:class IteratorVectorT;
+        -:    9:
+        -:   10:template <typename ElementT>
+        -:   11:class VectDinNewDeleteT
+        -:   12:{
+        -:   13:public:
+        -:   14:    /*
+        -:   15:    Constructor default
+        -:   16:    Alocam loc pentru 5 elemente
+        -:   17:    */
+        -:   18:    VectDinNewDeleteT();
+        -:   19:
+        -:   20:    /*
+        -:   21:    Constructor de copiere
+        -:   22:    */
+        -:   23:    VectDinNewDeleteT(const VectDinNewDeleteT& ot); //rule of 3
+        -:   24:
+        -:   25:    /*
+        -:   26:    Eliberam memoria
+        -:   27:    */
+        -:   28:    ~VectDinNewDeleteT();//rule of 3
+        -:   29:
+        -:   30:    /*
+        -:   31:    Operator assignment
+        -:   32:    elibereaza ce era in obiectul curent (this)
+        -:   33:    aloca spatiu pentru elemente
+        -:   34:    copiaza elementele din ot in this
+        -:   35:    */
+        -:   36:    VectDinNewDeleteT& operator=(const  VectDinNewDeleteT& ot);//rule of 3
+        -:   37:
+        -:   38:
+        -:   39:    /*
+        -:   40:    Move constructor
+        -:   41:    Apelat daca construim un nou vector dintr-un r-value (ex temporary, expresie de la return)
+        -:   42:    Obiectul ot nu se mai foloseste astfel se poate refolosi interiorul lui
+        -:   43:    */
+        -:   44:    VectDinNewDeleteT(VectDinNewDeleteT&& ot) noexcept ; //rule of 5
+        -:   45:
+        -:   46:    /*
+        -:   47:    Move assignment
+        -:   48:    Similar cu move constructor
+        -:   49:    Folosit la assignment
+        -:   50:    */
+        -:   51:    VectDinNewDeleteT& operator=(VectDinNewDeleteT&& ot) noexcept ; //rule of 5
+        -:   52:
+        -:   53:    const ElementT& operator[](size_t index) const;
+        -:   54:
+        -:   55:    ElementT& operator[](size_t index);
+        -:   56:
+        -:   57:    void push_back(const ElementT& el);
+        -:   58:
+        -:   59:    void erase(int poz);
+        -:   60:
+        -:   61:    [[nodiscard]] bool empty() const;
+        -:   62:
+        -:   63:    ElementT& get(int poz) const;
+        -:   64:
+        -:   65:    void insert(int poz, const ElementT& el);
+        -:   66:
+        -:   67:    [[nodiscard]] int size() const noexcept;
+        -:   68:
+        -:   69:    friend class IteratorVectorT<ElementT>;
+        -:   70:    //functii care creaza iteratori
+        -:   71:    IteratorVectorT<ElementT> begin() const;
+        -:   72:    IteratorVectorT<ElementT> end() const;
+        -:   73:
+        -:   74:private:
+        -:   75:    int lg;//numar elemente
+        -:   76:    int cap;//capacitate
+        -:   77:    ElementT* elems;//elemente
+        -:   78:
+        -:   79:    void ensureCapacity();
+        -:   80:};
+        -:   81:
+        -:   82:template<typename ElementT>
+function _ZNK17VectDinNewDeleteTI10DisciplinaEixEy called 1 returned 100% blocks executed 100%
+        1:   83:const ElementT &VectDinNewDeleteT<ElementT>::operator[](size_t index) const {
+        1:   84:    return elems[index];
+        1:   84-block  0
+        -:   85:}
+        -:   86:
+        -:   87:template<typename ElementT>
+function _ZN17VectDinNewDeleteTI10DisciplinaEixEy called 0 returned 0% blocks executed 0%
+    #####:   88:ElementT &VectDinNewDeleteT<ElementT>::operator[](size_t index){
+    #####:   89:    return elems[index];
+    %%%%%:   89-block  0
+        -:   90:}
+        -:   91:
+        -:   92:template<typename ElementT>
+       1*:   93:bool VectDinNewDeleteT<ElementT>::empty() const{
+       1*:   94:    if(lg == 0) return true;
+    #####:   95:}
+------------------
+_ZNK17VectDinNewDeleteTIiE5emptyEv:
+function _ZNK17VectDinNewDeleteTIiE5emptyEv called 1 returned 100% blocks executed 75%
+        1:   93:bool VectDinNewDeleteT<ElementT>::empty() const{
+        1:   94:    if(lg == 0) return true;
+        1:   94-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   94-block  1
+    #####:   95:}
+    %%%%%:   95-block  0
+------------------
+_ZNK17VectDinNewDeleteTI10DisciplinaE5emptyEv:
+function _ZNK17VectDinNewDeleteTI10DisciplinaE5emptyEv called 0 returned 0% blocks executed 0%
+    #####:   93:bool VectDinNewDeleteT<ElementT>::empty() const{
+    #####:   94:    if(lg == 0) return true;
+    %%%%%:   94-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   94-block  1
+    #####:   95:}
+    %%%%%:   95-block  0
+------------------
+        -:   96:
+        -:   97:/*
+        -:   98:Constructor default
+        -:   99:Alocam loc pentru 5 elemente
+        -:  100:*/
+        -:  101:template<typename ElementT>
+       2*:  102:VectDinNewDeleteT<ElementT>::VectDinNewDeleteT() :elems{ new ElementT[INITIAL_CAPACITY] }, cap{ INITIAL_CAPACITY }, lg{ 0 } {}
+------------------
+_ZN17VectDinNewDeleteTIiEC1Ev:
+function _ZN17VectDinNewDeleteTIiEC1Ev called 2 returned 100% blocks executed 100%
+        2:  102:VectDinNewDeleteT<ElementT>::VectDinNewDeleteT() :elems{ new ElementT[INITIAL_CAPACITY] }, cap{ INITIAL_CAPACITY }, lg{ 0 } {}
+        2:  102-block  0
+call    0 returned 2
+------------------
+_ZN17VectDinNewDeleteTI10DisciplinaEC1Ev:
+function _ZN17VectDinNewDeleteTI10DisciplinaEC1Ev called 0 returned 0% blocks executed 0%
+    #####:  102:VectDinNewDeleteT<ElementT>::VectDinNewDeleteT() :elems{ new ElementT[INITIAL_CAPACITY] }, cap{ INITIAL_CAPACITY }, lg{ 0 } {}
+    %%%%%:  102-block  0
+call    0 never executed
+    %%%%%:  102-block  1
+call    1 never executed
+    %%%%%:  102-block  2
+branch  2 never executed
+branch  3 never executed
+------------------
+        -:  103:
+        -:  104:/*
+        -:  105:Constructor de copiere
+        -:  106:Obiectul current (this) acum se creeaza
+        -:  107:aloca spatiu pentru elemente
+        -:  108:copieaza elementele din ot in this
+        -:  109:*/
+        -:  110:template<typename ElementT>
+function _ZN17VectDinNewDeleteTI10DisciplinaEC1ERKS1_ called 0 returned 0% blocks executed 0%
+    #####:  111:VectDinNewDeleteT<ElementT>::VectDinNewDeleteT(const VectDinNewDeleteT<ElementT>& ot) {
+    #####:  112:    elems = new ElementT[ot.cap];
+    %%%%%:  112-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  112-block  1
+    %%%%%:  112-block  2
+    %%%%%:  112-block  3
+call    2 never executed
+    %%%%%:  112-block  4
+call    3 never executed
+    %%%%%:  112-block  5
+branch  4 never executed
+branch  5 never executed
+        -:  113:    //copiez elementele
+    #####:  114:    for (int i = 0; i < ot.lg; i++) {
+    %%%%%:  114-block  0
+    %%%%%:  114-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  115:        elems[i] = ot.elems[i];  //assignment din Pet
+    %%%%%:  115-block  0
+call    0 never executed
+        -:  116:    }
+    #####:  117:    lg = ot.lg;
+    #####:  118:    cap = ot.cap;
+    #####:  119:}
+        -:  120:
+        -:  121:/*
+        -:  122:Operator assignment
+        -:  123:elibereaza ce era in obiectul curent (this)
+        -:  124:aloca spatiu pentru elemente
+        -:  125:copieaza elementele din ot in this
+        -:  126:*/
+        -:  127:template<typename ElementT>
+        2:  128:VectDinNewDeleteT<ElementT>& VectDinNewDeleteT<ElementT>::operator=(const VectDinNewDeleteT<ElementT>& ot) {
+        2:  129:    if (this == &ot) {
+    #####:  130:        return *this;//s-a facut l=l;
+        -:  131:    }
+        7:  132:    delete[] elems;
+     162*:  133:    elems = new ElementT[ot.cap];
+        -:  134:    //copiez elementele
+      106:  135:    for (int i = 0; i < ot.lg; i++) {
+      104:  136:        elems[i] = ot.elems[i];  //assignment din Pet
+        -:  137:    }
+        2:  138:    lg = ot.lg;
+        2:  139:    cap = ot.cap;
+        2:  140:    return *this;
+        -:  141:}
+------------------
+_ZN17VectDinNewDeleteTI10DisciplinaEaSERKS1_:
+function _ZN17VectDinNewDeleteTI10DisciplinaEaSERKS1_ called 1 returned 100% blocks executed 90%
+        1:  128:VectDinNewDeleteT<ElementT>& VectDinNewDeleteT<ElementT>::operator=(const VectDinNewDeleteT<ElementT>& ot) {
+        1:  129:    if (this == &ot) {
+        1:  129-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:  130:        return *this;//s-a facut l=l;
+    %%%%%:  130-block  0
+        -:  131:    }
+        6:  132:    delete[] elems;
+        1:  132-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  132-block  1
+        6:  132-block  2
+branch  2 taken 5 (fallthrough)
+branch  3 taken 1
+        5:  132-block  3
+call    4 returned 5
+        1:  132-block  4
+call    5 returned 1
+     161*:  133:    elems = new ElementT[ot.cap];
+        1:  133-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  133-block  1
+    %%%%%:  133-block  2
+        1:  133-block  3
+call    2 returned 1
+      160:  133-block  4
+call    3 returned 160
+      161:  133-block  5
+branch  4 taken 160
+branch  5 taken 1 (fallthrough)
+        -:  134:    //copiez elementele
+      101:  135:    for (int i = 0; i < ot.lg; i++) {
+        1:  135-block  0
+      101:  135-block  1
+branch  0 taken 100
+branch  1 taken 1 (fallthrough)
+      100:  136:        elems[i] = ot.elems[i];  //assignment din Pet
+      100:  136-block  0
+call    0 returned 100
+        -:  137:    }
+        1:  138:    lg = ot.lg;
+        1:  139:    cap = ot.cap;
+        1:  140:    return *this;
+        1:  140-block  0
+        -:  141:}
+------------------
+_ZN17VectDinNewDeleteTIiEaSERKS0_:
+function _ZN17VectDinNewDeleteTIiEaSERKS0_ called 1 returned 100% blocks executed 85%
+        1:  128:VectDinNewDeleteT<ElementT>& VectDinNewDeleteT<ElementT>::operator=(const VectDinNewDeleteT<ElementT>& ot) {
+        1:  129:    if (this == &ot) {
+        1:  129-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:  130:        return *this;//s-a facut l=l;
+    %%%%%:  130-block  0
+        -:  131:    }
+        1:  132:    delete[] elems;
+        1:  132-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  132-block  1
+call    2 returned 1
+       1*:  133:    elems = new ElementT[ot.cap];
+        1:  133-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  133-block  1
+    %%%%%:  133-block  2
+call    2 never executed
+        1:  133-block  3
+call    3 returned 1
+        -:  134:    //copiez elementele
+        5:  135:    for (int i = 0; i < ot.lg; i++) {
+        5:  135-block  0
+branch  0 taken 4
+branch  1 taken 1 (fallthrough)
+        4:  136:        elems[i] = ot.elems[i];  //assignment din Pet
+        4:  136-block  0
+        -:  137:    }
+        1:  138:    lg = ot.lg;
+        1:  139:    cap = ot.cap;
+        1:  140:    return *this;
+        1:  140-block  0
+        -:  141:}
+------------------
+        -:  142:
+        -:  143:/*
+        -:  144:Eliberam memoria
+        -:  145:*/
+        -:  146:template<typename ElementT>
+       2*:  147:VectDinNewDeleteT<ElementT>::~VectDinNewDeleteT() {
+       2*:  148:    delete[] elems;
+       2*:  149:}
+------------------
+_ZN17VectDinNewDeleteTIiED1Ev:
+function _ZN17VectDinNewDeleteTIiED1Ev called 2 returned 100% blocks executed 100%
+        2:  147:VectDinNewDeleteT<ElementT>::~VectDinNewDeleteT() {
+        2:  148:    delete[] elems;
+        2:  148-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  148-block  1
+call    2 returned 2
+        2:  149:}
+------------------
+_ZN17VectDinNewDeleteTI10DisciplinaED1Ev:
+function _ZN17VectDinNewDeleteTI10DisciplinaED1Ev called 0 returned 0% blocks executed 0%
+    #####:  147:VectDinNewDeleteT<ElementT>::~VectDinNewDeleteT() {
+    #####:  148:    delete[] elems;
+    %%%%%:  148-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  148-block  1
+    %%%%%:  148-block  2
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  148-block  3
+call    4 never executed
+    %%%%%:  148-block  4
+call    5 never executed
+    #####:  149:}
+------------------
+        -:  150:
+        -:  151:/*
+        -:  152:Move constructor
+        -:  153:Apelat daca construim un nou vector dintr-un r-value (ex temporary)
+        -:  154:Obiectul ot nu se mai foloseste astfel se poate refolosi interiorul lui
+        -:  155:*/
+        -:  156:template<typename ElementT>
+function _ZN17VectDinNewDeleteTI10DisciplinaEC1EOS1_ called 5 returned 100% blocks executed 100%
+        5:  157:VectDinNewDeleteT<ElementT>::VectDinNewDeleteT(VectDinNewDeleteT&& ot) noexcept {
+        -:  158:    // Copy the data pointer from other
+        5:  159:    elems = ot.elems;
+        5:  160:    lg = ot.lg;
+        5:  161:    cap = ot.cap;
+        -:  162:
+        -:  163:    // Release the data pointer from the source object so that
+        -:  164:    // the destructor does not free the memory multiple times.
+        5:  165:    ot.elems = nullptr;
+        5:  166:    ot.lg = 0;
+        5:  167:    ot.cap = 0;
+        5:  168:}
+        -:  169:
+        -:  170:/*
+        -:  171:Move assignment
+        -:  172:Similar cu move constructor
+        -:  173:Folosit la assignment
+        -:  174:Elibereaza ce continea obiectul curent (this)
+        -:  175:"fura" interiorul lui ot
+        -:  176:pregateste ot pentru distrugere
+        -:  177:*/
+        -:  178:template<typename ElementT>
+function _ZN17VectDinNewDeleteTI10DisciplinaEaSEOS1_ called 1 returned 100% blocks executed 89%
+        1:  179:VectDinNewDeleteT<ElementT>& VectDinNewDeleteT<ElementT>::operator=(VectDinNewDeleteT<ElementT>&& ot) noexcept {
+        1:  180:    if (this == &ot) {
+        1:  180-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:  181:        return *this;
+    %%%%%:  181-block  0
+        -:  182:    }
+       81:  183:    delete[] elems;
+        1:  183-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  183-block  1
+       81:  183-block  2
+branch  2 taken 80 (fallthrough)
+branch  3 taken 1
+       80:  183-block  3
+call    4 returned 80
+        1:  183-block  4
+call    5 returned 1
+        -:  184:    // Copy the data pointer from other
+        1:  185:    elems = ot.elems;
+        1:  186:    lg = ot.lg;
+        1:  187:    cap = ot.cap;
+        -:  188:
+        -:  189:    // Release the data pointer from the source object so that
+        -:  190:    // the destructor does not free the memory multiple times.
+        1:  191:    ot.elems = nullptr;
+        1:  192:    ot.lg = 0;
+        1:  193:    ot.cap = 0;
+        1:  194:    return *this;
+        1:  194-block  0
+        -:  195:}
+        -:  196:
+        -:  197:template<typename ElementT>
+       8*:  198:void VectDinNewDeleteT<ElementT>::push_back(const ElementT& el) {
+       8*:  199:    ensureCapacity();//daca e nevoie mai alocam memorie
+       8*:  200:    elems[lg++] = el;
+       8*:  201:}
+------------------
+_ZN17VectDinNewDeleteTI10DisciplinaE9push_backERKS0_:
+function _ZN17VectDinNewDeleteTI10DisciplinaE9push_backERKS0_ called 0 returned 0% blocks executed 0%
+    #####:  198:void VectDinNewDeleteT<ElementT>::push_back(const ElementT& el) {
+    #####:  199:    ensureCapacity();//daca e nevoie mai alocam memorie
+    %%%%%:  199-block  0
+call    0 never executed
+    #####:  200:    elems[lg++] = el;
+call    0 never executed
+    #####:  201:}
+------------------
+_ZN17VectDinNewDeleteTIiE9push_backERKi:
+function _ZN17VectDinNewDeleteTIiE9push_backERKi called 8 returned 100% blocks executed 100%
+        8:  198:void VectDinNewDeleteT<ElementT>::push_back(const ElementT& el) {
+        8:  199:    ensureCapacity();//daca e nevoie mai alocam memorie
+        8:  199-block  0
+call    0 returned 8
+        8:  200:    elems[lg++] = el;
+        8:  201:}
+------------------
+        -:  202:
+        -:  203:template<typename ElementT>
+       4*:  204:void VectDinNewDeleteT<ElementT>::erase(int poz) {
+       6*:  205:    for(int i = poz; i < lg -1; i++)
+       2*:  206:        elems[i] = elems[i+1];
+       4*:  207:    lg--;
+       4*:  208:}
+------------------
+_ZN17VectDinNewDeleteTI10DisciplinaE5eraseEi:
+function _ZN17VectDinNewDeleteTI10DisciplinaE5eraseEi called 0 returned 0% blocks executed 0%
+    #####:  204:void VectDinNewDeleteT<ElementT>::erase(int poz) {
+    #####:  205:    for(int i = poz; i < lg -1; i++)
+    %%%%%:  205-block  0
+    %%%%%:  205-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  206:        elems[i] = elems[i+1];
+    %%%%%:  206-block  0
+call    0 never executed
+    #####:  207:    lg--;
+    #####:  208:}
+------------------
+_ZN17VectDinNewDeleteTIiE5eraseEi:
+function _ZN17VectDinNewDeleteTIiE5eraseEi called 4 returned 100% blocks executed 100%
+        4:  204:void VectDinNewDeleteT<ElementT>::erase(int poz) {
+        6:  205:    for(int i = poz; i < lg -1; i++)
+        4:  205-block  0
+        6:  205-block  1
+branch  0 taken 2
+branch  1 taken 4 (fallthrough)
+        2:  206:        elems[i] = elems[i+1];
+        2:  206-block  0
+        4:  207:    lg--;
+        4:  208:}
+------------------
+        -:  209:
+        -:  210:template<typename ElementT>
+       2*:  211:ElementT& VectDinNewDeleteT<ElementT>::get(int poz) const {
+       2*:  212:    return elems[poz];
+        -:  213:}
+------------------
+_ZNK17VectDinNewDeleteTI10DisciplinaE3getEi:
+function _ZNK17VectDinNewDeleteTI10DisciplinaE3getEi called 0 returned 0% blocks executed 0%
+    #####:  211:ElementT& VectDinNewDeleteT<ElementT>::get(int poz) const {
+    #####:  212:    return elems[poz];
+    %%%%%:  212-block  0
+        -:  213:}
+------------------
+_ZNK17VectDinNewDeleteTIiE3getEi:
+function _ZNK17VectDinNewDeleteTIiE3getEi called 2 returned 100% blocks executed 100%
+        2:  211:ElementT& VectDinNewDeleteT<ElementT>::get(int poz) const {
+        2:  212:    return elems[poz];
+        2:  212-block  0
+        -:  213:}
+------------------
+        -:  214:
+        -:  215:template<typename ElementT>
+       1*:  216:void VectDinNewDeleteT<ElementT>::insert(int poz, const ElementT& el) {
+       1*:  217:    elems[poz] = el;
+       1*:  218:    if (lg == 0) {
+    #####:  219:        lg++;
+        -:  220:    }
+       1*:  221:}
+------------------
+_ZN17VectDinNewDeleteTI10DisciplinaE6insertEiRKS0_:
+function _ZN17VectDinNewDeleteTI10DisciplinaE6insertEiRKS0_ called 0 returned 0% blocks executed 0%
+    #####:  216:void VectDinNewDeleteT<ElementT>::insert(int poz, const ElementT& el) {
+    #####:  217:    elems[poz] = el;
+    %%%%%:  217-block  0
+call    0 never executed
+    #####:  218:    if (lg == 0) {
+branch  0 never executed
+branch  1 never executed
+    #####:  219:        lg++;
+    %%%%%:  219-block  0
+        -:  220:    }
+    #####:  221:}
+------------------
+_ZN17VectDinNewDeleteTIiE6insertEiRKi:
+function _ZN17VectDinNewDeleteTIiE6insertEiRKi called 1 returned 100% blocks executed 67%
+        1:  216:void VectDinNewDeleteT<ElementT>::insert(int poz, const ElementT& el) {
+        1:  217:    elems[poz] = el;
+        1:  218:    if (lg == 0) {
+        1:  218-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:  219:        lg++;
+    %%%%%:  219-block  0
+        -:  220:    }
+        1:  221:}
+------------------
+        -:  222:
+        -:  223:template<typename ElementT>
+       6*:  224:int VectDinNewDeleteT<ElementT>::size() const noexcept {
+       6*:  225:    return lg;
+        -:  226:}
+------------------
+_ZNK17VectDinNewDeleteTIiE4sizeEv:
+function _ZNK17VectDinNewDeleteTIiE4sizeEv called 6 returned 100% blocks executed 100%
+        6:  224:int VectDinNewDeleteT<ElementT>::size() const noexcept {
+        6:  225:    return lg;
+        6:  225-block  0
+        -:  226:}
+------------------
+_ZNK17VectDinNewDeleteTI10DisciplinaE4sizeEv:
+function _ZNK17VectDinNewDeleteTI10DisciplinaE4sizeEv called 0 returned 0% blocks executed 0%
+    #####:  224:int VectDinNewDeleteT<ElementT>::size() const noexcept {
+    #####:  225:    return lg;
+    %%%%%:  225-block  0
+        -:  226:}
+------------------
+        -:  227:
+        -:  228:template<typename ElementT>
+       8*:  229:void VectDinNewDeleteT<ElementT>::ensureCapacity() {
+       8*:  230:    if (lg < cap) {
+       8*:  231:        return; //mai avem loc
+        -:  232:    }
+    #####:  233:    cap *= 2;
+    #####:  234:    auto* aux = new ElementT[cap];
+    #####:  235:    for (int i = 0; i < lg; i++) {
+    #####:  236:        aux[i] = elems[i];
+        -:  237:    }
+    #####:  238:    delete[] elems;
+    #####:  239:    elems = aux;
+        -:  240:}
+------------------
+_ZN17VectDinNewDeleteTI10DisciplinaE14ensureCapacityEv:
+function _ZN17VectDinNewDeleteTI10DisciplinaE14ensureCapacityEv called 0 returned 0% blocks executed 0%
+    #####:  229:void VectDinNewDeleteT<ElementT>::ensureCapacity() {
+    #####:  230:    if (lg < cap) {
+    %%%%%:  230-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  231:        return; //mai avem loc
+    %%%%%:  231-block  0
+        -:  232:    }
+    #####:  233:    cap *= 2;
+    #####:  234:    auto* aux = new ElementT[cap];
+    %%%%%:  234-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  234-block  1
+    %%%%%:  234-block  2
+    %%%%%:  234-block  3
+call    2 never executed
+    %%%%%:  234-block  4
+call    3 never executed
+    %%%%%:  234-block  5
+branch  4 never executed
+branch  5 never executed
+    #####:  235:    for (int i = 0; i < lg; i++) {
+    %%%%%:  235-block  0
+    %%%%%:  235-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  236:        aux[i] = elems[i];
+    %%%%%:  236-block  0
+call    0 never executed
+        -:  237:    }
+    #####:  238:    delete[] elems;
+    %%%%%:  238-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  238-block  1
+    %%%%%:  238-block  2
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  238-block  3
+call    4 never executed
+    %%%%%:  238-block  4
+call    5 never executed
+    #####:  239:    elems = aux;
+    %%%%%:  239-block  0
+        -:  240:}
+------------------
+_ZN17VectDinNewDeleteTIiE14ensureCapacityEv:
+function _ZN17VectDinNewDeleteTIiE14ensureCapacityEv called 8 returned 100% blocks executed 23%
+        8:  229:void VectDinNewDeleteT<ElementT>::ensureCapacity() {
+        8:  230:    if (lg < cap) {
+        8:  230-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+        8:  231:        return; //mai avem loc
+        8:  231-block  0
+        -:  232:    }
+    #####:  233:    cap *= 2;
+    #####:  234:    auto* aux = new ElementT[cap];
+    %%%%%:  234-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  234-block  1
+    %%%%%:  234-block  2
+call    2 never executed
+    %%%%%:  234-block  3
+call    3 never executed
+    #####:  235:    for (int i = 0; i < lg; i++) {
+    %%%%%:  235-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  236:        aux[i] = elems[i];
+    %%%%%:  236-block  0
+        -:  237:    }
+    #####:  238:    delete[] elems;
+    %%%%%:  238-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  238-block  1
+call    2 never executed
+    #####:  239:    elems = aux;
+    %%%%%:  239-block  0
+        -:  240:}
+------------------
+        -:  241:
+        -:  242:template<typename ElementT>
+function _ZNK17VectDinNewDeleteTI10DisciplinaE5beginEv called 0 returned 0% blocks executed 0%
+    #####:  243:IteratorVectorT<ElementT> VectDinNewDeleteT<ElementT>::begin() const {
+    #####:  244:    return IteratorVectorT<ElementT>(*this);
+    %%%%%:  244-block  0
+call    0 never executed
+        -:  245:}
+        -:  246:
+        -:  247:template<typename ElementT>
+function _ZNK17VectDinNewDeleteTI10DisciplinaE3endEv called 0 returned 0% blocks executed 0%
+    #####:  248:IteratorVectorT<ElementT> VectDinNewDeleteT<ElementT>::end() const {
+    #####:  249:    return IteratorVectorT<ElementT>(*this, lg);
+    %%%%%:  249-block  0
+call    0 never executed
+        -:  250:}
+        -:  251:
+        -:  252:template<typename ElementT>
+        -:  253:class IteratorVectorT {
+        -:  254:private:
+        -:  255:    const VectDinNewDeleteT<ElementT>& v;
+        -:  256:    int poz = 0;
+        -:  257:public:
+        -:  258:    explicit IteratorVectorT(const VectDinNewDeleteT<ElementT>& v) noexcept;
+        -:  259:    IteratorVectorT(const VectDinNewDeleteT<ElementT>& v, int poz)noexcept;
+        -:  260:    [[nodiscard]] bool valid()const;
+        -:  261:    ElementT& element() const;
+        -:  262:    void next();
+        -:  263:    ElementT& operator*();
+        -:  264:    IteratorVectorT& operator++();
+        -:  265:    bool operator==(const IteratorVectorT& ot)noexcept;
+        -:  266:    bool operator!=(const IteratorVectorT& ot)noexcept;
+        -:  267:};
+        -:  268:
+        -:  269:template<typename ElementT>
+function _ZN15IteratorVectorTI10DisciplinaEC1ERK17VectDinNewDeleteTIS0_E called 0 returned 0% blocks executed 0%
+    #####:  270:IteratorVectorT<ElementT>::IteratorVectorT(const VectDinNewDeleteT<ElementT>& v) noexcept:v{ v } {}
+        -:  271:
+        -:  272:template<typename ElementT>
+function _ZN15IteratorVectorTI10DisciplinaEC1ERK17VectDinNewDeleteTIS0_Ei called 0 returned 0% blocks executed 0%
+    #####:  273:IteratorVectorT<ElementT>::IteratorVectorT(const VectDinNewDeleteT<ElementT>& v, int poz)noexcept : v{ v }, poz{ poz } {}
+        -:  274:
+        -:  275:template<typename ElementT>
+        -:  276:bool IteratorVectorT<ElementT>::valid()const {
+        -:  277:    return poz < v.lg;
+        -:  278:}
+        -:  279:
+        -:  280:template<typename ElementT>
+function _ZNK15IteratorVectorTI10DisciplinaE7elementEv called 0 returned 0% blocks executed 0%
+    #####:  281:ElementT& IteratorVectorT<ElementT>::element() const {
+    #####:  282:    return v.elems[poz];
+    %%%%%:  282-block  0
+        -:  283:}
+        -:  284:
+        -:  285:template<typename ElementT>
+function _ZN15IteratorVectorTI10DisciplinaE4nextEv called 0 returned 0% blocks executed 0%
+    #####:  286:void IteratorVectorT<ElementT>::next() {
+    #####:  287:    poz++;
+    #####:  288:}
+        -:  289:
+        -:  290:template<typename ElementT>
+function _ZN15IteratorVectorTI10DisciplinaEdeEv called 0 returned 0% blocks executed 0%
+    #####:  291:ElementT& IteratorVectorT<ElementT>::operator*() {
+    #####:  292:    return element();
+    %%%%%:  292-block  0
+call    0 never executed
+        -:  293:}
+        -:  294:
+        -:  295:template<typename ElementT>
+function _ZN15IteratorVectorTI10DisciplinaEppEv called 0 returned 0% blocks executed 0%
+    #####:  296:IteratorVectorT<ElementT>& IteratorVectorT<ElementT>::operator++() {
+    #####:  297:    next();
+    %%%%%:  297-block  0
+call    0 never executed
+    #####:  298:    return *this;
+        -:  299:}
+        -:  300:
+        -:  301:template<typename ElementT>
+function _ZN15IteratorVectorTI10DisciplinaEeqERKS1_ called 0 returned 0% blocks executed 0%
+    #####:  302:bool IteratorVectorT<ElementT>::operator==(const IteratorVectorT<ElementT>& ot) noexcept {
+    #####:  303:    return poz == ot.poz;
+    %%%%%:  303-block  0
+        -:  304:}
+        -:  305:
+        -:  306:template<typename ElementT>
+function _ZN15IteratorVectorTI10DisciplinaEneERKS1_ called 0 returned 0% blocks executed 0%
+    #####:  307:bool IteratorVectorT<ElementT>::operator!=(const IteratorVectorT<ElementT>& ot) noexcept {
+    #####:  308:    return !(*this == ot);
+    %%%%%:  308-block  0
+call    0 never executed
+        -:  309:}

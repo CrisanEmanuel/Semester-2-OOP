@@ -1,0 +1,98 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_5/domain.c
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_5\cmake-build-debug-coverage\CMakeFiles\Laborator_5.dir\domain.c.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_5\cmake-build-debug-coverage\CMakeFiles\Laborator_5.dir\domain.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "domain.h"
+        -:    2:#include <string.h>
+        -:    3:#include <assert.h>
+        -:    4:#include <stdlib.h>
+        -:    5:
+function createCar called 46 returned 100% blocks executed 100%
+       46:    6:Car* createCar(char* plateNo, char* model, char* type, int rent){
+       46:    7:    Car* rez = malloc(sizeof(Car));
+        -:    8:
+       46:    9:    size_t nrC = strlen(plateNo) + 1;
+       46:   10:    rez->plateNo = malloc(sizeof(char) * nrC);
+       46:   11:    if (rez->plateNo != 0)
+       46:   11-block  0
+branch  0 taken 46 (fallthrough)
+branch  1 taken 0
+       46:   12:        strcpy(rez->plateNo, plateNo);
+       46:   12-block  0
+        -:   13:
+       46:   14:    nrC = strlen(model) + 1;
+       46:   15:    rez->model = malloc(sizeof(char) * nrC);
+       46:   16:    if (rez->model != 0)
+       46:   16-block  0
+branch  0 taken 46 (fallthrough)
+branch  1 taken 0
+       46:   17:        strcpy(rez->model, model);
+       46:   17-block  0
+        -:   18:
+       46:   19:    nrC = strlen(type) + 1;
+       46:   20:    rez->type = malloc(sizeof(char) * nrC);
+       46:   21:    if (rez->type != 0)
+       46:   21-block  0
+branch  0 taken 46 (fallthrough)
+branch  1 taken 0
+       46:   22:        strcpy(rez->type, type);
+       46:   22-block  0
+        -:   23:
+       46:   24:    rez->rented = rent;
+        -:   25:
+       46:   26:    return rez;
+       46:   26-block  0
+        -:   27:}
+        -:   28:
+function destroyCar called 43 returned 100% blocks executed 100%
+       43:   29:void destroyCar(Car* c){
+       43:   30:    free(c->plateNo);
+       43:   31:    free(c->type);
+       43:   32:    free(c->model);
+       43:   33:    free(c);
+       43:   34:}
+        -:   35:
+function copyCar called 28 returned 100% blocks executed 100%
+       28:   36:Car* copyCar(Car* p){
+       28:   37:    return createCar(p->plateNo, p->model, p->type, p->rented);
+       28:   37-block  0
+call    0 returned 28
+        -:   38:}
+        -:   39:
+function testeMasina called 1 returned 100% blocks executed 58%
+        1:   40:void testeMasina(){
+        1:   41:    Car* p = createCar("NT46DAN", "Skoda", "cazan", 0);
+        1:   41-block  0
+call    0 returned 1
+       1*:   42:    assert(strcmp(p->plateNo, "NT46DAN") == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   42-block  0
+call    2 never executed
+        1:   42-block  1
+       1*:   43:    assert(strcmp(p->model, "Skoda") == 0);
+        1:   43-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   43-block  1
+call    2 never executed
+        1:   43-block  2
+       1*:   44:    assert(strcmp(p->type, "cazan") == 0);
+        1:   44-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   44-block  1
+call    2 never executed
+        1:   44-block  2
+       1*:   45:    assert(p->rented == 0);
+        1:   45-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   45-block  1
+call    2 never executed
+        1:   45-block  2
+        -:   46:
+        1:   47:    destroyCar(p);
+        1:   47-block  0
+call    0 returned 1
+        1:   48:}

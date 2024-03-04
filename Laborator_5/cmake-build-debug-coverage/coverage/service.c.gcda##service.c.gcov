@@ -1,0 +1,490 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_5/service.c
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_5\cmake-build-debug-coverage\CMakeFiles\Laborator_5.dir\service.c.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_5\cmake-build-debug-coverage\CMakeFiles\Laborator_5.dir\service.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "service.h"
+        -:    2:#include "repository.h"
+        -:    3:#include "mysort.h"
+        -:    4:#include <string.h>
+        -:    5:#include <assert.h>
+        -:    6:
+        -:    7:
+function addCar called 13 returned 100% blocks executed 100%
+       13:    8:int addCar(CarStore* l, char* plateNo, char* model, char* type){
+       13:    9:    Car* p = createCar(plateNo, model, type, 0);
+       13:    9-block  0
+call    0 returned 13
+       13:   10:    if (plateNo[0] == 0) return 1;
+branch  0 taken 1 (fallthrough)
+branch  1 taken 12
+        1:   10-block  0
+       12:   11:    if (model[0] == 0) return 2;
+       12:   11-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 11
+        1:   11-block  1
+       11:   12:    if (type[0] == 0) return 3;
+       11:   12-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 10
+        1:   12-block  1
+        -:   13:
+       10:   14:    CarList *copie = copyList(l->allCars, (CopyFunction) copyCar);
+       10:   14-block  0
+call    0 returned 10
+        -:   15:
+       10:   16:    add(l->allCars, p);
+call    0 returned 10
+       10:   17:    add(l->undoList, copie);
+call    0 returned 10
+        -:   18:
+       10:   19:    return 0;
+        -:   20:}
+        -:   21:
+function createCarStore called 3 returned 100% blocks executed 100%
+        3:   22:CarStore createCarStore()
+        -:   23:{
+        -:   24:    CarStore rez;
+        3:   25:    rez.allCars = createEmpty((DestroyFunction) destroyCar);
+        3:   25-block  0
+call    0 returned 3
+        3:   26:    rez.undoList = createEmpty((DestroyFunction) destroy);
+call    0 returned 3
+        3:   27:    return rez;
+        -:   28:}
+        -:   29:
+function destroyStore called 3 returned 100% blocks executed 100%
+        3:   30:void destroyStore(CarStore* store)
+        -:   31:{
+        3:   32:    destroy(store->allCars);
+        3:   32-block  0
+call    0 returned 3
+        3:   33:    destroy(store->undoList);
+call    0 returned 3
+        3:   34:}
+        -:   35:
+function changeRentStatus called 3 returned 100% blocks executed 100%
+        3:   36:int changeRentStatus(CarStore* l, char* plateNo){
+        7:   37:    for(int i = 0; i < size(l->allCars); i++){
+        3:   37-block  0
+        4:   37-block  1
+        7:   37-block  2
+call    0 returned 7
+branch  1 taken 6
+branch  2 taken 1 (fallthrough)
+        6:   38:        Car* c = get(l->allCars, i);
+        6:   38-block  0
+call    0 returned 6
+        6:   39:        if(strcmp(c->plateNo, plateNo) == 0){
+branch  0 taken 2 (fallthrough)
+branch  1 taken 4
+        2:   40:            CarList* copie = copyList(l->allCars, (CopyFunction) copyCar);
+        2:   40-block  0
+call    0 returned 2
+        2:   41:            add(l->undoList, copie);
+call    0 returned 2
+        2:   42:            if(c->rented == 0)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        -:   43:            {
+        1:   44:                c->rented = 1;
+        1:   44-block  0
+        -:   45:            }
+        -:   46:            else
+        -:   47:            {
+        1:   48:                c->rented = 0;
+        1:   48-block  0
+        -:   49:            }
+        2:   50:            return 0;
+        2:   50-block  0
+        -:   51:        }
+        -:   52:    }
+        1:   53:    return -1;
+        1:   53-block  0
+        -:   54:}
+        -:   55:
+function undo called 4 returned 100% blocks executed 100%
+        4:   56:int undo(CarStore* list){
+        4:   57:    if (size(list->undoList) == 0)
+        4:   57-block  0
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        1:   58:        return 1; // no more undo
+        1:   58-block  0
+        3:   59:    CarList* l = removeLast(list->undoList);
+        3:   59-block  0
+call    0 returned 3
+        3:   60:    destroy(list->allCars);
+call    0 returned 3
+        3:   61:    list->allCars = l;
+        3:   62:    return 0; // ok
+        -:   63:}
+        -:   64:
+function updateCar called 2 returned 100% blocks executed 100%
+        2:   65:int updateCar(CarStore* list, char* plate, char* plateUpd, char* modelUpd, char* typeUpd){
+        4:   66:    for (int i = 0; i < size(list->allCars); i++){
+        2:   66-block  0
+        2:   66-block  1
+        4:   66-block  2
+call    0 returned 4
+branch  1 taken 3
+branch  2 taken 1 (fallthrough)
+        3:   67:        Car* c = get(list->allCars, i);
+        3:   67-block  0
+call    0 returned 3
+        3:   68:        if (strcmp(c->plateNo, plate) == 0){
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   69:            int rent = c->rented;
+        1:   70:            Car* newC = createCar(plateUpd, modelUpd, typeUpd, rent);
+        1:   70-block  0
+call    0 returned 1
+        1:   71:            CarList* copie = copyList(list->allCars, (CopyFunction) copyCar);
+call    0 returned 1
+        1:   72:            add(list->undoList, copie);
+call    0 returned 1
+        1:   73:            destroyCar(set(list->allCars, i, newC));
+call    0 returned 1
+call    1 returned 1
+        1:   74:            return 0;
+        -:   75:        }
+        -:   76:    }
+        1:   77:    return -1;
+        1:   77-block  0
+        -:   78:}
+        -:   79:
+function cmpModel called 10 returned 100% blocks executed 100%
+       10:   80:int cmpModel(Car* c1, Car* c2){
+       10:   81:    return strcmp(c1->model, c2->model);
+       10:   81-block  0
+        -:   82:}
+        -:   83:
+function cmpType called 10 returned 100% blocks executed 100%
+       10:   84:int cmpType(Car* c1, Car* c2){
+       10:   85:    return strcmp(c1->type, c2->type);
+       10:   85-block  0
+        -:   86:}
+        -:   87:
+function sortByModel called 1 returned 100% blocks executed 100%
+        1:   88:CarList* sortByModel(CarStore* list){
+        1:   89:    CarList* l = copyList(list->allCars, (CopyFunction) copyCar);
+        1:   89-block  0
+call    0 returned 1
+        1:   90:    sort(l, (FunctieComparare) cmpModel);
+call    0 returned 1
+        1:   91:    return l;
+        -:   92:}
+        -:   93:
+function sortByType called 1 returned 100% blocks executed 100%
+        1:   94:CarList* sortByType(CarStore* list){
+        1:   95:    CarList* l = copyList(list->allCars, (CopyFunction) copyCar);
+        1:   95-block  0
+call    0 returned 1
+        1:   96:    sort(l, (FunctieComparare) cmpType);
+call    0 returned 1
+        1:   97:    return l;
+        -:   98:}
+        -:   99:
+function testeService called 1 returned 100% blocks executed 65%
+        1:  100:void testeService(){
+        1:  101:    CarStore list = createCarStore();
+        1:  101-block  0
+call    0 returned 1
+       1*:  102:    assert(addCar(&list, "CJ01AAA", "Ferrari", "Sport") == 0); // astea care dau 0 se adauga in lista
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  102-block  0
+call    3 never executed
+        1:  102-block  1
+       1*:  103:    assert(addCar(&list, "", "Ferrari", "Sport") == 1);
+        1:  103-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  103-block  1
+call    3 never executed
+        1:  103-block  2
+       1*:  104:    assert(addCar(&list, "CJ01AAA", "", "Sport") == 2);
+        1:  104-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  104-block  1
+call    3 never executed
+        1:  104-block  2
+       1*:  105:    assert(addCar(&list, "CJ01AAA", "Ferrari", "") == 3);
+        1:  105-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  105-block  1
+call    3 never executed
+        1:  105-block  2
+       1*:  106:    assert(addCar(&list, "CJ03DAN", "Tesla", "Sedan") == 0);
+        1:  106-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  106-block  1
+call    3 never executed
+        1:  106-block  2
+       1*:  107:    assert(addCar(&list, "NT99XYZ", "BMW", "Break") == 0);
+        1:  107-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  107-block  1
+call    3 never executed
+        1:  107-block  2
+       1*:  108:    assert(addCar(&list, "BC12ABC", "Aro", "SUV") == 0);
+        1:  108-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  108-block  1
+call    3 never executed
+        1:  108-block  2
+       1*:  109:    assert(addCar(&list, "SV03ALX", "Volkswagen", "Hatchback") == 0);
+        1:  109-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  109-block  1
+call    3 never executed
+        1:  109-block  2
+        -:  110:
+        1:  111:    CarList* sorted1 = sortByType(&list);
+        1:  111-block  0
+call    0 returned 1
+        1:  112:    Car* c1 = get(sorted1, 0);
+call    0 returned 1
+       1*:  113:    assert(strcmp(c1->plateNo, "NT99XYZ") == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  113-block  0
+call    2 never executed
+        1:  113-block  1
+        1:  114:    destroy(sorted1);
+        1:  114-block  0
+call    0 returned 1
+        -:  115:
+        1:  116:    CarList* sorted2 = sortByModel(&list);
+call    0 returned 1
+        1:  117:    Car* c2 = get(sorted2, 0);
+call    0 returned 1
+       1*:  118:    assert(strcmp(c2->plateNo, "BC12ABC") == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  118-block  0
+call    2 never executed
+        1:  118-block  1
+        1:  119:    destroy(sorted2);
+        1:  119-block  0
+call    0 returned 1
+        -:  120:
+        1:  121:    destroyStore(&list);
+call    0 returned 1
+        1:  122:}
+        -:  123:
+function testUndo called 1 returned 100% blocks executed 62%
+        1:  124:void testUndo(){
+        1:  125:    CarStore list = createCarStore();
+        1:  125-block  0
+call    0 returned 1
+        -:  126:
+       1*:  127:    assert(size(list.allCars) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  127-block  0
+call    3 never executed
+        1:  127-block  1
+        -:  128:
+        1:  129:    addCar(&list, "CJ01AAA", "Ferrari", "Sport");
+        1:  129-block  0
+call    0 returned 1
+       1*:  130:    assert(size(list.allCars) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  130-block  0
+call    3 never executed
+        1:  130-block  1
+        -:  131:
+       1*:  132:    assert(undo(&list) == 0);
+        1:  132-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  132-block  1
+call    3 never executed
+        1:  132-block  2
+       1*:  133:    assert(size(list.allCars) == 0);
+        1:  133-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  133-block  1
+call    3 never executed
+        1:  133-block  2
+        -:  134:
+        1:  135:    addCar(&list, "CJ03DAN", "Tesla", "Sedan");
+        1:  135-block  0
+call    0 returned 1
+        1:  136:    addCar(&list, "NT99XYZ", "BMW", "Break");
+call    0 returned 1
+        -:  137:
+       1*:  138:    assert(undo(&list) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  138-block  0
+call    3 never executed
+        1:  138-block  1
+       1*:  139:    assert(size(list.allCars) == 1);
+        1:  139-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  139-block  1
+call    3 never executed
+        1:  139-block  2
+        -:  140:
+       1*:  141:    assert(undo(&list) == 0);
+        1:  141-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  141-block  1
+call    3 never executed
+        1:  141-block  2
+       1*:  142:    assert(size(list.allCars) == 0);
+        1:  142-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  142-block  1
+call    3 never executed
+        1:  142-block  2
+        -:  143:
+       1*:  144:    assert(undo(&list) == 1);
+        1:  144-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  144-block  1
+call    3 never executed
+        1:  144-block  2
+        -:  145:
+        1:  146:    addCar(&list, "CJ03DAN", "Tesla", "Sedan");
+        1:  146-block  0
+call    0 returned 1
+        1:  147:    addCar(&list, "NT99XYZ", "BMW", "Break");
+call    0 returned 1
+       1*:  148:    assert(size(list.allCars) == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  148-block  0
+call    3 never executed
+        1:  148-block  1
+        -:  149:
+        1:  150:    Car* c1 = get(list.allCars, 0);
+        1:  150-block  0
+call    0 returned 1
+       1*:  151:    assert(strcmp(c1->plateNo, "CJ03DAN") == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  151-block  0
+call    2 never executed
+        1:  151-block  1
+        -:  152:
+       1*:  153:    assert(updateCar(&list, "CJ03DAN", "dd", "dd", "dd") == 0);
+        1:  153-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  153-block  1
+call    3 never executed
+        1:  153-block  2
+        1:  154:    c1 = get(list.allCars, 0);
+        1:  154-block  0
+call    0 returned 1
+       1*:  155:    assert(strcmp(c1->plateNo, "dd") == 0); /// trebuia sa fie dd nu CJ03DAN
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  155-block  0
+call    2 never executed
+        1:  155-block  1
+        -:  156:
+       1*:  157:    assert(updateCar(&list, "nimic", "dd", "dd", "dd") == -1);
+        1:  157-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  157-block  1
+call    3 never executed
+        1:  157-block  2
+        -:  158:
+        1:  159:    Car* c2 = get(list.allCars, 1);
+        1:  159-block  0
+call    0 returned 1
+       1*:  160:    assert(c2->rented == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  160-block  0
+call    2 never executed
+        1:  160-block  1
+        -:  161:
+       1*:  162:    assert(changeRentStatus(&list, "NT99XYZ") == 0);
+        1:  162-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  162-block  1
+call    3 never executed
+        1:  162-block  2
+       1*:  163:    assert(c2->rented == 1);
+        1:  163-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  163-block  1
+call    2 never executed
+        1:  163-block  2
+       1*:  164:    assert(changeRentStatus(&list, "NT99XYZ") == 0);
+        1:  164-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  164-block  1
+call    3 never executed
+        1:  164-block  2
+       1*:  165:    assert(c2->rented == 0);
+        1:  165-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  165-block  1
+call    2 never executed
+        1:  165-block  2
+        -:  166:
+        -:  167:///// !!!!!!
+        -:  168://    assert(undo(&list) == 0);
+        -:  169://    assert(c2->rented == 0); /// !!!!!! trebuia 1
+        -:  170:///// !!!!!!
+        -:  171:
+       1*:  172:    assert(changeRentStatus(&list, "nimic") == -1);
+        1:  172-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  172-block  1
+call    3 never executed
+        1:  172-block  2
+        -:  173:
+        1:  174:    destroyStore(&list);
+        1:  174-block  0
+call    0 returned 1
+        1:  175:}
+        -:  176:

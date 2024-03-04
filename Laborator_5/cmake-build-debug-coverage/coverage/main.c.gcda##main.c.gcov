@@ -1,0 +1,255 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_5/main.c
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_5\cmake-build-debug-coverage\CMakeFiles\Laborator_5.dir\main.c.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_5\cmake-build-debug-coverage\CMakeFiles\Laborator_5.dir\main.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "domain.h"
+        -:    2:#include "service.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include <stdlib.h>
+        -:    5:
+function readCar called 0 returned 0% blocks executed 0%
+    #####:    6:void readCar(CarStore* list){
+    #####:    7:    printf("Plate:");
+    %%%%%:    7-block  0
+call    0 never executed
+        -:    8:    char plate[30];
+    #####:    9:    scanf("%s", plate);
+call    0 never executed
+        -:   10:
+    #####:   11:    printf("Model:");
+call    0 never executed
+        -:   12:    char model[30];
+    #####:   13:    scanf("%s", model);
+call    0 never executed
+        -:   14:
+    #####:   15:    printf("Type:");
+call    0 never executed
+        -:   16:    char type[30];
+    #####:   17:    scanf("%s", type);
+call    0 never executed
+        -:   18:
+    #####:   19:    int error = addCar(list, plate, model, type);
+call    0 never executed
+    #####:   20:    if (error != 0)
+branch  0 never executed
+branch  1 never executed
+    #####:   21:        printf("Invalid.\n");
+    %%%%%:   21-block  0
+call    0 never executed
+        -:   22:    else
+    #####:   23:        printf("Car added.\n");
+    %%%%%:   23-block  0
+call    0 never executed
+    #####:   24:}
+        -:   25:
+        -:   26://print toate masinile, cu toate criteriile
+function printAllCars called 0 returned 0% blocks executed 0%
+    #####:   27:void printAllCars (CarList* l){
+    #####:   28:    printf("Cars:\n");
+    %%%%%:   28-block  0
+call    0 never executed
+    #####:   29:    for (int i = 0; i < size(l); i++) {
+    %%%%%:   29-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   30:        Car* p = get(l, i);
+    %%%%%:   30-block  0
+call    0 never executed
+    #####:   31:        printf("plateNo:%s Model:%s Category:%s Rented: %d\n", p->plateNo, p->model, p->type, p->rented);
+call    0 never executed
+        -:   32:    }
+    #####:   33:}
+        -:   34:
+function updateCarUi called 0 returned 0% blocks executed 0%
+    #####:   35:int updateCarUi(CarStore* list){
+        -:   36:    char plate[30];
+    #####:   37:    printf("Plate:");
+    %%%%%:   37-block  0
+call    0 never executed
+    #####:   38:    scanf("%s", plate);
+call    0 never executed
+        -:   39:
+        -:   40:    char plateUpd[30];
+    #####:   41:    printf("Updated plate:");
+call    0 never executed
+    #####:   42:    scanf("%s", plateUpd);
+call    0 never executed
+        -:   43:
+        -:   44:    char modelUpd[30];
+    #####:   45:    printf("Updated model:");
+call    0 never executed
+    #####:   46:    scanf("%s", modelUpd);
+call    0 never executed
+        -:   47:
+        -:   48:    char typeUpd[30];
+    #####:   49:    printf("Updated type:");
+call    0 never executed
+    #####:   50:    scanf("%s", typeUpd);
+call    0 never executed
+        -:   51:
+    #####:   52:    return updateCar(list, plate, plateUpd, modelUpd, typeUpd);
+call    0 never executed
+        -:   53:}
+        -:   54:
+function changeRentStatusUi called 0 returned 0% blocks executed 0%
+    #####:   55:int changeRentStatusUi(CarStore* list){
+    #####:   56:    printf("Plate:");
+    %%%%%:   56-block  0
+call    0 never executed
+        -:   57:
+        -:   58:    char plateNo[30];
+    #####:   59:    scanf("%s", plateNo);
+call    0 never executed
+    #####:   60:    return changeRentStatus(list, plateNo);
+call    0 never executed
+        -:   61:}
+        -:   62:
+function meniu called 1 returned 100% blocks executed 100%
+        1:   63:void meniu(){
+        1:   64:    printf("1) Add\n");
+        1:   64-block  0
+call    0 returned 1
+        1:   65:    printf("2) Update\n");
+call    0 returned 1
+        1:   66:    printf("3) Rent/return car\n");
+call    0 returned 1
+        1:   67:    printf("4) Sort by model\n");
+call    0 returned 1
+        1:   68:    printf("5) Sort by type\n");
+call    0 returned 1
+        1:   69:    printf("6) Undo\n");
+call    0 returned 1
+        1:   70:    printf("7) Show all\n");
+call    0 returned 1
+        -:   71:
+        1:   72:}
+        -:   73:
+function run_ui called 1 returned 100% blocks executed 31%
+        1:   74:void run_ui(){
+        1:   75:    CarStore list = createCarStore();
+        1:   75-block  0
+call    0 returned 1
+        -:   76:    CarList *sorted;
+        1:   77:    int ruleaza = 1;
+        2:   78:    while (ruleaza)
+        2:   78-block  0
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        -:   79:    {
+        -:   80:        char aux[30];
+        -:   81:        int cmd;
+        1:   82:        printf(">>>");
+        1:   82-block  0
+call    0 returned 1
+        1:   83:        scanf("%s", aux);
+call    0 returned 1
+        1:   84:        cmd = strtol(aux, NULL, 10);
+call    0 returned 1
+        1:   85:        switch (cmd)
+branch  0 taken 0
+branch  1 taken 0
+branch  2 taken 0
+branch  3 taken 0
+branch  4 taken 0
+branch  5 taken 0
+branch  6 taken 0
+branch  7 taken 1
+branch  8 taken 0
+        -:   86:        {
+    #####:   87:            case 1:
+    #####:   88:                readCar(&list);
+    %%%%%:   88-block  0
+call    0 never executed
+    #####:   89:                break;
+    #####:   90:            case 2:
+    #####:   91:                if(updateCarUi(&list) == -1){
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:                    printf("Car not found!\n");
+    %%%%%:   92-block  0
+call    0 never executed
+        -:   93:                }
+    #####:   94:                break;
+    %%%%%:   94-block  0
+    #####:   95:            case 3:
+    #####:   96:                if(changeRentStatusUi(&list) == -1){
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   97:                    printf("Car not found!\n");
+    %%%%%:   97-block  0
+call    0 never executed
+        -:   98:                }
+    #####:   99:                break;
+    %%%%%:   99-block  0
+    #####:  100:            case 4:
+    #####:  101:                sorted = sortByModel(&list);
+    %%%%%:  101-block  0
+call    0 never executed
+    #####:  102:                printAllCars(sorted);
+call    0 never executed
+    #####:  103:                destroy(sorted);
+call    0 never executed
+    #####:  104:                break;
+    #####:  105:            case 5:
+    #####:  106:                sorted = sortByType(&list);
+    %%%%%:  106-block  0
+call    0 never executed
+    #####:  107:                printAllCars(sorted);
+call    0 never executed
+    #####:  108:                destroy(sorted);
+call    0 never executed
+    #####:  109:                break;
+    #####:  110:            case 6:
+    #####:  111:                if (undo(&list) == 1) printf("No more undo!\n");
+    %%%%%:  111-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  111-block  1
+call    3 never executed
+    #####:  112:                break;
+    %%%%%:  112-block  0
+    #####:  113:            case 7:
+    #####:  114:                printAllCars(list.allCars);
+    %%%%%:  114-block  0
+call    0 never executed
+    #####:  115:                break;
+        1:  116:            case 0:
+        1:  117:                ruleaza = 0;
+        1:  118:                break;
+        1:  118-block  0
+    #####:  119:            default:
+    #####:  120:                printf("Comanda invalida! Incercati din nou\n");
+    %%%%%:  120-block  0
+call    0 never executed
+        -:  121:        }
+        -:  122:    }
+        1:  123:    destroyStore(&list);
+        1:  123-block  0
+call    0 returned 1
+        1:  124:}
+        -:  125:
+function main called 1 returned 100% blocks executed 100%
+        1:  126:int main(){
+        1:  127:    testeService();
+        1:  127-block  0
+call    0 returned 1
+        1:  128:    testeMasina();
+call    0 returned 1
+        1:  129:    testeLista();
+call    0 returned 1
+        1:  130:    testListeDeListe();
+call    0 returned 1
+        1:  131:    testUndo();
+call    0 returned 1
+        1:  132:    meniu();
+call    0 returned 1
+        1:  133:    run_ui();
+call    0 returned 1
+        1:  134:    return 0;
+        -:  135:}

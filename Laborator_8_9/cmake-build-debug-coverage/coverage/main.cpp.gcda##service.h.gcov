@@ -1,0 +1,83 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/service.h
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:#include "repository.h"
+        -:    4:#include <functional>
+        -:    5:#include "validare.h"
+        -:    6:#include <algorithm>
+        -:    7:#include "Contract.h"
+        -:    8:#include <map>
+        -:    9:#include "undo.h"
+        -:   10:#include "exceptions.h"
+        -:   11:#include <memory>
+        -:   12:
+        -:   13:using std::string;
+        -:   14:using std::function;
+        -:   15:using std::vector;
+        -:   16:using std::map;
+        -:   17:using std::unique_ptr;
+        -:   18:
+        -:   19:class Service {
+        -:   20:
+        -:   21:    vector<Disciplina> filter(const function<bool(const Disciplina&)>& fct);
+        -:   22:
+        -:   23:    vector<Disciplina> generalSort(bool (*fct)(const Disciplina&, const Disciplina&));
+        -:   24:
+        -:   25:public:
+        -:   26:    Repo& repo;
+        -:   27:
+        -:   28:    Contract& contract;
+        -:   29:
+        -:   30:    std::vector<unique_ptr<ActiuneUndo>> undoActions;
+        -:   31:
+function _ZN7ServiceC1ER4RepoR8Contract called 4 returned 100% blocks executed 100%
+        4:   32:    explicit Service(Repo& repo, Contract& contract) :repo{ repo }, contract{ contract }{}
+        4:   32-block  0
+call    0 returned 4
+        -:   33:
+        -:   34:    Service(const Service& ot) = delete;
+        -:   35:
+        -:   36:    vector<Disciplina> getAll();
+        -:   37:
+        -:   38:    void addService(const string& denumire, int ore, const string& tip, const string& profesor);
+        -:   39:
+        -:   40:    void deleteService(const string& denumire);
+        -:   41:
+        -:   42:    void updateService(const string& denumire, const string& denumireNoua, int nrOreNou, const string& tipNou, const string& profesorNou);
+        -:   43:
+        -:   44:    Disciplina searchService(const string& denumire);
+        -:   45:
+        -:   46:    vector<Disciplina> filterNrOre(int nrOre);
+        -:   47:
+        -:   48:    vector<Disciplina> filterProfesor(const string& profesor);
+        -:   49:
+        -:   50:    vector<Disciplina> sortByDenumire();
+        -:   51:
+        -:   52:    vector<Disciplina> sortByNrOre();
+        -:   53:
+        -:   54:    vector<Disciplina> sortByTipProfesor();
+        -:   55:
+        -:   56:    /// functii pentru contract
+        -:   57:    void addToContractService(const vector<string>& denumiri);
+        -:   58:
+        -:   59:    void emptyContractService();
+        -:   60:
+        -:   61:    vector<Disciplina> getAllDisciplineFromContractService();
+        -:   62:
+        -:   63:    void generateRandomContractService(int nrDiscipline);
+        -:   64:
+        -:   65:    int nrDisciplineContract();
+        -:   66:
+        -:   67:    void exportContractToFileCSVService(const string& fileName);
+        -:   68:
+        -:   69:    void exportContractToFileHTMLService(const string& fileName);
+        -:   70:    /// functii pentru contract
+        -:   71:
+        -:   72:    map<string, int> funcNoua(); /// pt labul 8 (create map)
+        -:   73:
+        -:   74:    void undoService();
+        -:   75:};
+        -:   76:

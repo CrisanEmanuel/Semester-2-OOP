@@ -1,0 +1,3 @@
+/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_8_9/cmake-build-release-wsl/CMakeFiles/Laborator_8_9.dir
+/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_8_9/cmake-build-release-wsl/CMakeFiles/edit_cache.dir
+/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_8_9/cmake-build-release-wsl/CMakeFiles/rebuild_cache.dir

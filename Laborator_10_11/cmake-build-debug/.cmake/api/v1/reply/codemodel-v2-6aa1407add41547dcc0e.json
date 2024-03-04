@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Laborator_10_11",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Laborator_10_11::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Laborator_10_11-Debug-bc733b55f95b03e3d14f.json",
+					"name" : "Laborator_10_11",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Laborator_10_11_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Laborator_10_11_autogen-Debug-c904bd43d1ced6fb48e3.json",
+					"name" : "Laborator_10_11_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Laborator_10_11_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Laborator_10_11_autogen_timestamp_deps-Debug-984d4aee370e305cad2f.json",
+					"name" : "Laborator_10_11_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/EMANUEL/Desktop/OOP/Laborator_10_11/cmake-build-debug",
+		"source" : "C:/Users/EMANUEL/Desktop/OOP/Laborator_10_11"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

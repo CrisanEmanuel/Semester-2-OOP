@@ -1,0 +1,526 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/Contract.cpp
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\Contract.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\Contract.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Contract.h"
+        -:    2:
+function _ZN8Contract13addToContractERK10Disciplina called 4 returned 100% blocks executed 100%
+        4:    3:void Contract::addToContract(const Disciplina& disciplina) {
+        4:    4:    contract.push_back(disciplina);
+        4:    4-block  0
+call    0 returned 4
+        4:    5:}
+        -:    6:
+function _ZN8Contract13emptyContractEv called 1 returned 100% blocks executed 100%
+        1:    7:void Contract::emptyContract(){
+        1:    8:    contract.clear();
+        1:    8-block  0
+call    0 returned 1
+        1:    9:}
+        -:   10:
+function _ZN8Contract16generateContractEiRKSt6vectorI10DisciplinaSaIS1_EE called 1 returned 100% blocks executed 84%
+        1:   11:void Contract::generateContract(int nrDiscipline,  const vector<Disciplina>& allDiscipline) {
+        1:   12:    contract.clear();
+        1:   12-block  0
+call    0 returned 1
+        1:   13:    std::mt19937 mt{ std::random_device{}() };
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   13-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   13-block  2
+        1:   14:    std::uniform_int_distribution<> dist(0, int(allDiscipline.size()) - 1);
+        1:   14-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   15:    vector<int> freq;
+        1:   15-block  0
+call    0 returned 1
+        -:   16:
+        1:   17:    int randomNumber = dist(mt);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18:    freq.push_back(randomNumber);
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   19:
+        2:   20:    for (int i = 0 ; i < nrDiscipline - 1; i++) {
+        1:   20-block  0
+        1:   20-block  1
+        2:   20-block  2
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:   21:        randomNumber = dist(mt);
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22:        auto it = std::find(freq.begin(), freq.end(), randomNumber);
+        1:   22-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   23:        if (it != freq.end()) {
+        1:   23-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    #####:   24:            i--;
+    %%%%%:   24-block  0
+        1:   25:        }else { freq.push_back(randomNumber); }
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   26:    }
+        -:   27:
+        3:   28:    for (const int& i: freq){
+        1:   28-block  0
+call    0 returned 1
+call    1 returned 1
+        2:   28-block  1
+call    2 returned 2
+        2:   28-block  2
+call    3 returned 2
+        3:   28-block  3
+call    4 returned 3
+branch  5 taken 2
+branch  6 taken 1 (fallthrough)
+        2:   29:        contract.push_back(allDiscipline[i]);
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   30:    }
+        1:   31:}
+        1:   31-block  0
+call    0 returned 1
+    $$$$$:   31-block  1
+call    1 never executed
+        -:   32:
+function _ZN8Contract6getAllEv called 9 returned 100% blocks executed 100%
+        9:   33:const vector<Disciplina>& Contract::getAll(){
+        9:   34:    return contract;
+        9:   34-block  0
+        -:   35:}
+        -:   36:
+function _ZN8Contract27deleteDisciplinaDinContractERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 6 returned 100% blocks executed 76%
+        6:   37:void Contract::deleteDisciplinaDinContract(const string& denumire) {
+function _ZZN8Contract27deleteDisciplinaDinContractERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK10DisciplinaE_clESA_ called 1 returned 100% blocks executed 100%
+        6:   38:    auto it = find_if(contract.begin(), contract.end(), [denumire] (const Disciplina& d) {
+        6:   38-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   38-block  1
+call    3 returned 6
+call    4 returned 6
+call    5 returned 6
+branch  6 taken 6 (fallthrough)
+branch  7 taken 0 (throw)
+        6:   38-block  2
+call    8 returned 6
+    $$$$$:   38-block  3
+call    9 never executed
+    $$$$$:   38-block  4
+        1:   39:       return d.getDenumire() == denumire;
+        1:   39-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+        -:   40:    });
+        6:   41:    if(it != contract.end()){
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 1 (fallthrough)
+branch  3 taken 5
+        1:   42:        contract.erase(it);
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   42-block  1
+    $$$$$:   42-block  2
+        -:   43:    }
+        6:   44:}
+        6:   44-block  0
+        -:   45:
+function _ZN8Contract27updateDisciplinaDinContractERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK10Disciplina called 3 returned 100% blocks executed 75%
+        3:   46:void Contract::updateDisciplinaDinContract(const string& denumire, const Disciplina& disciplinaNoua) {
+function _ZZN8Contract27updateDisciplinaDinContractERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK10DisciplinaENKUlSA_E_clESA_ called 1 returned 100% blocks executed 100%
+        3:   47:    auto it = find_if(contract.begin(), contract.end(), [denumire] (const Disciplina& d) {
+        3:   47-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   47-block  1
+call    3 returned 3
+call    4 returned 3
+call    5 returned 3
+branch  6 taken 3 (fallthrough)
+branch  7 taken 0 (throw)
+        3:   47-block  2
+call    8 returned 3
+    $$$$$:   47-block  3
+call    9 never executed
+    $$$$$:   47-block  4
+        1:   48:       return d.getDenumire() == denumire;
+        1:   48-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+        -:   49:    });
+        3:   50:    if(it != contract.end()){
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 1 (fallthrough)
+branch  3 taken 2
+        1:   51:        contract.erase(it);
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   51-block  1
+        1:   52:        contract.insert(it, disciplinaNoua);
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   52-block  1
+    $$$$$:   52-block  2
+        -:   53:    }
+        3:   54:}
+        3:   54-block  0
+        -:   55:
+function _ZN8Contract23exportContractToFileCSVERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 74%
+        2:   56:void Contract::exportContractToFileCSV(const string& fileName) {
+        2:   57:    std::ofstream out(fileName, std::ios::trunc);
+        2:   57-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   58:    if (!out.is_open()) {
+        2:   58-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   58-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:   59:        throw RepoException("Nu se poate deschide: " + fileName);
+        1:   59-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   59-block  2
+call    7 never executed
+        -:   60:    }
+        -:   61:
+        3:   62:    for(const Disciplina& d: contract){
+        1:   62-block  0
+call    0 returned 1
+call    1 returned 1
+        2:   62-block  1
+call    2 returned 2
+        3:   62-block  2
+call    3 returned 3
+branch  4 taken 2
+branch  5 taken 1 (fallthrough)
+        2:   63:        out << d.getDenumire() << ',' << d.getOrePeSaptamana() << ',';
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   63-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   63-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   63-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   63-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   63-block  4
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:   63-block  5
+call   18 returned 2
+    $$$$$:   63-block  6
+call   19 never executed
+    $$$$$:   63-block  7
+        2:   64:        out << d.getTip() << ',' << d.getProfesor() << '\n';
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   64-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   64-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   64-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   64-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   64-block  4
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:   64-block  5
+call   18 returned 2
+call   19 returned 2
+call   20 returned 2
+    $$$$$:   64-block  6
+call   21 never executed
+    $$$$$:   64-block  7
+    $$$$$:   64-block  8
+call   22 never executed
+    $$$$$:   64-block  9
+        -:   65:    }
+        1:   66:    out.close();
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   67:}
+        1:   67-block  0
+call    0 returned 1
+        1:   67-block  1
+call    1 returned 1
+        -:   68:
+function _ZN8Contract24exportContractToFileHTMLERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 82%
+        2:   69:void Contract::exportContractToFileHTML(const string& fileName) {
+        2:   70:    std::ofstream out(fileName, std::ios::trunc);
+        2:   70-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   71:    if (!out.is_open()) {
+        2:   71-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   71-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:   72:        throw RepoException("Nu se poate deschide: " + fileName);
+        1:   72-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   72-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   72-block  2
+call    7 never executed
+        -:   73:    }
+        1:   74:    out << "<html><body>" << std::endl;
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   75:    out << R"(<table border="1" style="width:100%">)" << std::endl;
+        1:   75-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   75-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   76:    for (const auto& d : contract) {
+        1:   76-block  0
+call    0 returned 1
+call    1 returned 1
+        2:   76-block  1
+call    2 returned 2
+        2:   76-block  2
+call    3 returned 2
+        3:   76-block  3
+call    4 returned 3
+branch  5 taken 2
+branch  6 taken 1 (fallthrough)
+        2:   77:        out << "<tr>" << std::endl;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   77-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   78:        out << "<td>" << d.getDenumire() << "</td>"<<std::endl;
+        2:   78-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   78-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   78-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   78-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   78-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   78-block  5
+call   15 returned 2
+    $$$$$:   78-block  6
+call   16 never executed
+    $$$$$:   78-block  7
+        2:   79:        out << "<td>" << d.getOrePeSaptamana() << "</td>" << std::endl;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   79-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   79-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   79-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   79-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   80:        out << "<td>" << d.getTip() << "</td>" << std::endl;
+        2:   80-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   80-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   80-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   80-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   80-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   80-block  5
+call   15 returned 2
+    $$$$$:   80-block  6
+call   16 never executed
+    $$$$$:   80-block  7
+        2:   81:        out << "<td>" << d.getProfesor() << "</td>" << std::endl;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   81-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   81-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   81-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   81-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   81-block  4
+call   15 returned 2
+    $$$$$:   81-block  5
+call   16 never executed
+    $$$$$:   81-block  6
+        2:   82:        out << "</tr>" << std::endl;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   82-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   83:    }
+        1:   84:    out << "</table>" << std::endl;
+        1:   84-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   84-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   85:    out << "</body></html>" << std::endl;
+        1:   85-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   85-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   86:    out.close();
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   87:}
+        1:   87-block  0
+call    0 returned 1
+        1:   87-block  1
+call    1 returned 1

@@ -1,0 +1,15 @@
+# ninja log v5
+81	1428	7057017248974740	CMakeFiles/Laborator_8_9.dir/validare.cpp.obj	41dd86779ebdca6c
+2	348	7052745917458611	CMakeFiles/Laborator_8_9.dir/domain.cpp.obj	d395de7e6da1ea19
+3	586	7057135798844742	CMakeFiles/Laborator_8_9.dir/repository.cpp.obj	1b4348fd5eb334b0
+12	1023	7057017244925999	CMakeFiles/Laborator_8_9.dir/exceptions.cpp.obj	90d619acb8d098d2
+3	811	7057130627958058	CMakeFiles/Laborator_8_9.dir/main.cpp.obj	7cfaba2630c3b331
+3	951	7057134488055607	CMakeFiles/Laborator_8_9.dir/tests.cpp.obj	c7c3bdc4befcd256
+20	2438	7057017259075472	CMakeFiles/Laborator_8_9.dir/ui.cpp.obj	5133317c9fe98798
+26	3271	7057017267407127	CMakeFiles/Laborator_8_9.dir/service.cpp.obj	61005c2b19855e51
+586	825	7057135801191431	Laborator_8_9.exe	b486164be99b8386
+72	2311	7057017257819990	CMakeFiles/Laborator_8_9.dir/Contract.cpp.obj	21b9c61b67851a9e
+22	550	7052745919483588	CMakeFiles/Laborator_8_9.dir/repository_file.cpp.obj	a5244affd2869043
+13	777	7056818420997307	CMakeFiles/Laborator_8_9.dir/FileContract.cpp.obj	a36d7347c57285f0
+54	1597	7057017250665223	CMakeFiles/Laborator_8_9.dir/undo.cpp.obj	69ceba57e9b3a71b
+64	1655	7057017251258718	CMakeFiles/Laborator_8_9.dir/repositoryFile.cpp.obj	3c5708a85974b63a

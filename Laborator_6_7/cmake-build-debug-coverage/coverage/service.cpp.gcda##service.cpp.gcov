@@ -1,0 +1,331 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_6_7/service.cpp
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_6_7\cmake-build-debug-coverage\CMakeFiles\Laborator_6_7.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_6_7\cmake-build-debug-coverage\CMakeFiles\Laborator_6_7.dir\service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "service.h"
+        -:    2:
+function _ZN7Service6getAllEv called 9 returned 100% blocks executed 100%
+        9:    3:VectDinNewDeleteT<Disciplina> Service::getAll() {
+        9:    4:    return repo.getAll();
+        9:    4-block  0
+call    0 returned 9
+call    1 returned 9
+        -:    5:}
+        -:    6:
+function _ZN7Service10addServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS7_S7_ called 8 returned 100% blocks executed 60%
+        8:    7:void Service::addService(const string& denumire, int ore, const string& tip, const string& profesor){
+       16:    8:    Disciplina d(denumire, ore, tip, profesor);
+        8:    8-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:    8-block  1
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:    8-block  2
+call    6 returned 8
+branch  7 taken 8 (fallthrough)
+branch  8 taken 0 (throw)
+        8:    8-block  3
+call    9 returned 8
+call   10 returned 8
+call   11 returned 8
+    $$$$$:    8-block  4
+    $$$$$:    8-block  5
+        8:    9:    ValidareDisciplina::validate(d);
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   10:    repo.addRepo(d);
+        8:   10-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   11:}
+        8:   11-block  0
+call    0 returned 8
+    $$$$$:   11-block  1
+call    1 never executed
+        -:   12:
+function _ZN7Service13deleteServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 80% blocks executed 100%
+        5:   13:void Service::deleteService(const string& denumire) {
+        5:   14:    repo.deleteRepo(denumire);
+        5:   14-block  0
+call    0 returned 4
+        4:   15:}
+        -:   16:
+function _ZN7Service13updateServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_iS7_S7_ called 2 returned 50% blocks executed 70%
+        2:   17:void Service::updateService(const string& denumire, const string& denumireNoua, int nrOreNou, const string& tipNou, const string& profesorNou) {
+        4:   18:    Disciplina disciplinaNoua(denumireNoua, nrOreNou, tipNou, profesorNou);
+        2:   18-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   18-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   18-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   18-block  3
+call    9 returned 2
+call   10 returned 2
+call   11 returned 2
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+        2:   19:    ValidareDisciplina::validate(disciplinaNoua);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   20:    repo.updateRepo(denumire, disciplinaNoua);
+        2:   20-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        2:   21:}
+        1:   21-block  0
+call    0 returned 1
+        1:   21-block  1
+call    1 returned 1
+        -:   22:
+function _ZN7Service13searchServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 100%
+        2:   23:Disciplina Service::searchService(const string &denumire) {
+        2:   24:    return repo.searchRepo(denumire);
+        2:   24-block  0
+call    0 returned 1
+        -:   25:}
+        -:   26:
+function _ZN7Service6filterERKSt8functionIFbRK10DisciplinaEE called 6 returned 100% blocks executed 81%
+        6:   27:VectDinNewDeleteT<Disciplina> Service::filter(const function<bool(const Disciplina&)>& fct){
+        6:   28:    VectDinNewDeleteT<Disciplina> rez;
+        6:   28-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   29:    VectDinNewDeleteT<Disciplina> all = repo.getAll();
+        6:   29-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+       30:   30:    for (int i = 0; i < all.size(); i++){
+        6:   30-block  0
+       24:   30-block  1
+       30:   30-block  2
+call    0 returned 30
+branch  1 taken 24
+branch  2 taken 6 (fallthrough)
+       24:   31:        if (fct(all.get(i))) {
+       24:   31-block  0
+call    0 returned 24
+call    1 returned 24
+branch  2 taken 24 (fallthrough)
+branch  3 taken 0 (throw)
+       24:   31-block  1
+branch  4 taken 6 (fallthrough)
+branch  5 taken 18
+        6:   32:            rez.push_back(all.get(i));
+        6:   32-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   33:        }
+        -:   34:    }
+       12:   35:    return rez;}
+        6:   35-block  0
+        6:   35-block  1
+call    0 returned 6
+        6:   35-block  2
+    $$$$$:   35-block  3
+call    1 never executed
+    $$$$$:   35-block  4
+call    2 never executed
+        -:   36:
+function _ZN7Service11filterNrOreEi called 3 returned 100% blocks executed 75%
+        3:   37:VectDinNewDeleteT<Disciplina> Service::filterNrOre(int nrOre) {
+function _ZZN7Service11filterNrOreEiENKUlRK10DisciplinaE_clES2_ called 12 returned 100% blocks executed 100%
+       24:   38:    return filter([nrOre](const Disciplina& d) {
+       12:   39:        return d.getOrePeSaptamana() == nrOre;
+       12:   39-block  0
+call    0 returned 12
+        3:   40:    });
+        3:   40-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   40-block  1
+call    4 returned 3
+        3:   40-block  2
+    $$$$$:   40-block  3
+call    5 never executed
+        -:   41:}
+        -:   42:
+function _ZN7Service14filterProfesorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 62%
+        3:   43:VectDinNewDeleteT<Disciplina> Service::filterProfesor(const string& profesor) {
+function _ZZN7Service14filterProfesorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK10DisciplinaE_clESA_ called 12 returned 100% blocks executed 100%
+       12:   44:    return filter([profesor](const Disciplina& d) {
+       12:   45:        return d.getProfesor() == profesor;
+       12:   45-block  0
+call    0 returned 12
+call    1 returned 12
+call    2 returned 12
+        3:   46:    });
+        3:   46-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   46-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   46-block  2
+call    7 returned 3
+call    8 returned 3
+        3:   46-block  3
+    $$$$$:   46-block  4
+call    9 never executed
+    $$$$$:   46-block  5
+    $$$$$:   46-block  6
+call   10 never executed
+        -:   47:}
+        -:   48:
+function _ZN7Service11generalSortEPFbRK10DisciplinaS2_E called 3 returned 100% blocks executed 87%
+        3:   49:VectDinNewDeleteT<Disciplina> Service::generalSort(bool(*fct)(const Disciplina&, const Disciplina&)) {
+        3:   50:    VectDinNewDeleteT<Disciplina> v{ repo.getAll() }; //fac o copie
+        3:   50-block  0
+call    0 returned 3
+call    1 returned 3
+       15:   51:    for (size_t i = 0; i < v.size(); i++) {
+       12:   51-block  0
+       15:   51-block  1
+call    0 returned 15
+branch  1 taken 12
+branch  2 taken 3 (fallthrough)
+       30:   52:        for (size_t j = i + 1; j < v.size(); j++) {
+       12:   52-block  0
+       18:   52-block  1
+       30:   52-block  2
+call    0 returned 30
+branch  1 taken 18
+branch  2 taken 12 (fallthrough)
+       18:   53:            if (!fct(v[i], v[j])) {
+       18:   53-block  0
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+branch  3 taken 18 (fallthrough)
+branch  4 taken 0 (throw)
+       18:   53-block  1
+branch  5 taken 6 (fallthrough)
+branch  6 taken 12
+        -:   54:                //interschimbam
+        6:   55:                Disciplina aux = v[i];
+        6:   55-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   56:                v[i] = v[j];
+        6:   56-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+branch  3 taken 6 (fallthrough)
+branch  4 taken 0 (throw)
+        6:   57:                v[j] =  aux;
+        6:   57-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   58:            }
+        6:   58-block  0
+call    0 returned 6
+    $$$$$:   58-block  1
+call    1 never executed
+        -:   59:        }
+        -:   60:    }
+        3:   61:    return v;}
+        3:   61-block  0
+        3:   61-block  1
+    $$$$$:   61-block  2
+call    0 never executed
+        -:   62:
+function _ZN7Service14sortByDenumireEv called 1 returned 100% blocks executed 100%
+        1:   63:VectDinNewDeleteT<Disciplina> Service::sortByDenumire(){
+        1:   64:    return generalSort(Disciplina::cmpDenumire);
+        1:   64-block  0
+call    0 returned 1
+        -:   65:}
+        -:   66:
+function _ZN7Service11sortByNrOreEv called 1 returned 100% blocks executed 100%
+        1:   67:VectDinNewDeleteT<Disciplina> Service::sortByNrOre(){
+        1:   68:    return generalSort(Disciplina::cmpNrOre);
+        1:   68-block  0
+call    0 returned 1
+        -:   69:}
+        -:   70:
+function _ZN7Service17sortByTipProfesorEv called 1 returned 100% blocks executed 100%
+        1:   71:VectDinNewDeleteT<Disciplina> Service::sortByTipProfesor() {
+function _ZZN7Service17sortByTipProfesorEvENKUlRK10DisciplinaS2_E_clES2_S2_ called 6 returned 100% blocks executed 71%
+        6:   72:    return generalSort([](const Disciplina& d1, const Disciplina& d2) {
+        6:   73:        if (d1.getTip() == d2.getTip()) {
+        6:   73-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   73-block  1
+call    4 returned 6
+call    5 returned 6
+call    6 returned 6
+branch  7 taken 1 (fallthrough)
+branch  8 taken 5
+    $$$$$:   73-block  2
+call    9 never executed
+    $$$$$:   73-block  3
+call   10 never executed
+        1:   74:            return d1.getProfesor() < d2.getProfesor();
+        1:   74-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   74-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   74-block  2
+call    7 never executed
+    $$$$$:   74-block  3
+call    8 never executed
+        -:   75:        }
+        5:   76:        return d1.getTip() < d2.getTip();
+        5:   76-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   76-block  1
+call    4 returned 5
+call    5 returned 5
+call    6 returned 5
+    $$$$$:   76-block  2
+call    7 never executed
+        1:   77:    });
+        1:   77-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   77-block  1
+        1:   77-block  2
+        -:   78:}
+        -:   79:
+        -:   80:

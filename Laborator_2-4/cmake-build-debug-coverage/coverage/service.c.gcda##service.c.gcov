@@ -1,0 +1,183 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_2-4/service.c
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_2-4\cmake-build-debug-coverage\CMakeFiles\Laborator_2_4.dir\service.c.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_2-4\cmake-build-debug-coverage\CMakeFiles\Laborator_2_4.dir\service.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "service.h"
+        -:    2:#include "validate.h"
+        -:    3:#include <string.h>
+        -:    4:#include <stdlib.h>
+        -:    5:
+        -:    6:/*
+        -:    7: * Create and validate an offer, if is valid, the offer will be added to the list
+        -:    8: */
+function addOffer called 14 returned 100% blocks executed 100%
+       14:    9:int addOffer(MyList *l, char *type, float area, char *address, float price){
+       14:   10:    Offer o = createOffer(type, area, address, price);
+       14:   10-block  0
+call    0 returned 14
+        -:   11:
+       14:   12:    int var = validate(o);
+call    0 returned 14
+       14:   13:    if (var != 0) {
+branch  0 taken 4 (fallthrough)
+branch  1 taken 10
+        4:   14:        destroyOffer(&o);
+        4:   14-block  0
+call    0 returned 4
+        4:   15:        return var;
+        -:   16:    }
+        -:   17:
+       10:   18:    add(l, o);
+       10:   18-block  0
+call    0 returned 10
+       10:   19:    return 0; // all ok
+        -:   20:}
+        -:   21:/*
+        -:   22: * Functie care sterge o oferta
+        -:   23: * Returneaza 0 daca oferta a fost stearsa, -1 in caz contrar
+        -:   24: */
+function sterge_oferta_service called 2 returned 100% blocks executed 100%
+        2:   25:int sterge_oferta_service(MyList *list, char *tip, char *adresa) {
+        2:   26:    return sterge_oferta_repo(list, tip, adresa);
+        2:   26-block  0
+call    0 returned 2
+        -:   27:}
+        -:   28:
+        -:   29:/*
+        -:   30: * Functia returneaza valoarea 0 daca entitatea a fost gasita si updatata sau valoarea -1 daca entitatea nu exista
+        -:   31: */
+function actualizeaza_oferta_service called 2 returned 100% blocks executed 100%
+        2:   32:int actualizeaza_oferta_service(MyList *l,char *type, char *address, char *new_type, float new_area, char *new_address, float new_price){
+        -:   33:    int var;
+        2:   34:    ElemType el = createOffer(new_type, new_area, new_address, new_price);
+        2:   34-block  0
+call    0 returned 2
+        2:   35:    var = actualizeaza_oferta_repo(l, type, address, el);
+call    0 returned 2
+        2:   36:    return var;
+        -:   37:}
+        -:   38:
+        -:   39:/*
+        -:   40: * Ordoneaza ofertele din lista dupa pret crescator iar in caz ca preturile sunt egale, se ordoneaza dupa tip crescator
+        -:   41: */
+function sortare_dupa_pret_tip_service called 1 returned 100% blocks executed 100%
+        1:   42:MyList sortare_dupa_pret_tip_service(MyList L){
+        1:   43:    MyList l = copyList(&L);
+        1:   43-block  0
+call    0 returned 1
+        3:   44:    for(int i = 0; i < l.length - 1; i++) {
+        2:   44-block  0
+        3:   44-block  1
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        5:   45:        for (int j = i+1; j < l.length; j++) {
+        2:   45-block  0
+        3:   45-block  1
+        5:   45-block  2
+branch  0 taken 3
+branch  1 taken 2 (fallthrough)
+        3:   46:            Offer o1 = get(&l, i);
+        3:   46-block  0
+call    0 returned 3
+        3:   47:            Offer o2 = get(&l, j);
+call    0 returned 3
+        3:   48:            if(o1.price > o2.price){
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   49:                set(&l,i,o2);
+        1:   49-block  0
+call    0 returned 1
+        1:   50:                set(&l,j,o1);
+call    0 returned 1
+        2:   51:            }else if(o1.price == o2.price){
+        2:   51-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   52:                if(strcmp(o1.type, o2.type) >= 0){
+        1:   52-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   53:                    set(&l,i,o2);
+        1:   53-block  0
+call    0 returned 1
+        1:   54:                    set(&l,j,o1);
+call    0 returned 1
+        -:   55:                }
+        -:   56:            }
+        -:   57:        }
+        -:   58:    }
+        1:   59:    return l;
+        1:   59-block  0
+        -:   60:}
+        -:   61:
+function filtrare_dupa_criteriu_service called 3 returned 100% blocks executed 100%
+        3:   62:MyList filtrare_dupa_criteriu_service(MyList l, char filtru[], char param[]){
+        3:   63:    MyList lista_filtrata = createEmpty();
+        3:   63-block  0
+call    0 returned 3
+        3:   64:    MyList L = copyList(&l);
+call    0 returned 3
+        3:   65:    if (strcmp(filtru, "tip") == 0){
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        4:   66:        for (int i = 0; i < L.length; i++){
+        1:   66-block  0
+        3:   66-block  1
+        4:   66-block  2
+branch  0 taken 3
+branch  1 taken 1
+        3:   67:            Offer o = get(&L, i);
+        3:   67-block  0
+call    0 returned 3
+        3:   68:            if (strstr(o.type, param) != NULL) add(&lista_filtrata, o);
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   68-block  0
+call    2 returned 1
+        -:   69:        }
+        2:   70:    }else if (strcmp(filtru, "suprafata") == 0){
+        2:   70-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   71:        float suprafata = strtof(param, NULL);
+        1:   71-block  0
+call    0 returned 1
+        4:   72:        for (int i = 0; i < L.length; i++){
+        3:   72-block  0
+        4:   72-block  1
+branch  0 taken 3
+branch  1 taken 1
+        3:   73:            Offer  o = get(&L, i);
+        3:   73-block  0
+call    0 returned 3
+        3:   74:            if (o.area == suprafata) add(&lista_filtrata, o);
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   74-block  0
+call    2 returned 1
+        -:   75:        }
+        1:   76:    }else if (strcmp(filtru, "pret") == 0){
+        1:   76-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   77:        float pret = strtof(param, NULL);
+        1:   77-block  0
+call    0 returned 1
+        4:   78:        for (int i = 0; i < L.length; i++){
+        3:   78-block  0
+        4:   78-block  1
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+        3:   79:            Offer o = get(&L, i);
+        3:   79-block  0
+call    0 returned 3
+        3:   80:            if (o.price == pret) add(&lista_filtrata, o);
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   80-block  0
+call    2 returned 1
+        -:   81:        }
+        -:   82:    }
+        3:   83:    return lista_filtrata;
+        3:   83-block  0
+        -:   84:}

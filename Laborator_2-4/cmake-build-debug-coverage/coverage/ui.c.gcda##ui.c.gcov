@@ -1,0 +1,378 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_2-4/ui.c
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_2-4\cmake-build-debug-coverage\CMakeFiles\Laborator_2_4.dir\ui.c.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_2-4\cmake-build-debug-coverage\CMakeFiles\Laborator_2_4.dir\ui.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "ui.h"
+        -:    2:#include <stdio.h>
+        -:    3:#include <string.h>
+        -:    4:#include <stdlib.h>
+        -:    5:#include "domain.h"
+        -:    6:#include "service.h"
+        -:    7:
+function meniu called 0 returned 0% blocks executed 0%
+    #####:    8:void meniu(){
+    #####:    9:    printf("---------- MENIU ----------\n");
+    %%%%%:    9-block  0
+call    0 never executed
+    #####:   10:    printf("1.Adauga oferta\n");
+call    0 never executed
+    #####:   11:    printf("2.Actualizeaza oferta\n");
+call    0 never executed
+    #####:   12:    printf("3.Sterge oferta\n");
+call    0 never executed
+    #####:   13:    printf("4.Ordonare oferte dupa pret, tip\n");
+call    0 never executed
+    #####:   14:    printf("5.Filtrare oferte dupa criteriu (suprafata/tip/pret)\n");
+call    0 never executed
+    #####:   15:}
+        -:   16:
+function adauga_oferta called 0 returned 0% blocks executed 0%
+    #####:   17:void adauga_oferta(MyList *l){
+    #####:   18:    printf("Type:");
+    %%%%%:   18-block  0
+call    0 never executed
+        -:   19:    char type[30];
+    #####:   20:    scanf("%s", type);
+call    0 never executed
+        -:   21:
+    #####:   22:    printf("Area:");
+call    0 never executed
+        -:   23:    float area;  char aux[30];
+    #####:   24:    scanf("%s", aux);
+call    0 never executed
+    #####:   25:    area = strtof(aux, NULL); // strtof transforma stringul citit in float
+call    0 never executed
+        -:   26:
+    #####:   27:    printf("Address:");
+call    0 never executed
+        -:   28:    char address[30];
+    #####:   29:    scanf("%s", address);
+call    0 never executed
+        -:   30:
+    #####:   31:    printf("Price:");
+call    0 never executed
+        -:   32:    float price;
+    #####:   33:    scanf("%s", aux);
+call    0 never executed
+    #####:   34:    price = strtof(aux, NULL);
+call    0 never executed
+        -:   35:
+    #####:   36:    int error = addOffer(l, type, area, address, price);
+call    0 never executed
+    #####:   37:    if(error !=0){
+branch  0 never executed
+branch  1 never executed
+    #####:   38:        printf("Invalid offer!\n");
+    %%%%%:   38-block  0
+call    0 never executed
+        -:   39:
+        -:   40:    }
+        -:   41:    else {
+    #####:   42:        printf("Offer added!\n");
+    %%%%%:   42-block  0
+call    0 never executed
+        -:   43:    }
+    #####:   44:}
+        -:   45:
+function sterge_oferta called 0 returned 0% blocks executed 0%
+    #####:   46:void sterge_oferta(MyList *l) {
+        -:   47:    char tip[20], adresa[20];
+    #####:   48:    printf("Dati tipul ofertei:");
+    %%%%%:   48-block  0
+call    0 never executed
+    #####:   49:    scanf("%s", tip);
+call    0 never executed
+    #####:   50:    printf("Dati adresa ofertei:");
+call    0 never executed
+    #####:   51:    scanf("%s", adresa);
+call    0 never executed
+    #####:   52:    int ver = sterge_oferta_service(l, tip, adresa);
+call    0 never executed
+    #####:   53:    if (ver == 0) {
+branch  0 never executed
+branch  1 never executed
+    #####:   54:        printf("Oferta stearsa cu succes!\n");
+    %%%%%:   54-block  0
+call    0 never executed
+        -:   55:    }else {
+    #####:   56:        printf("Oferta indicata nu exista!\n");
+    %%%%%:   56-block  0
+call    0 never executed
+        -:   57:    }
+    #####:   58:}
+        -:   59:
+function actualizeaza_oferta called 0 returned 0% blocks executed 0%
+    #####:   60:void actualizeaza_oferta(MyList *l){
+        -:   61:    char type[30], address[30];
+        -:   62:
+    #####:   63:    printf("Alegeti oferta pentru actualizare(tip/adresa)\n");
+    %%%%%:   63-block  0
+call    0 never executed
+        -:   64:
+    #####:   65:    printf("Dati tip:");
+call    0 never executed
+    #####:   66:    scanf("%s", type);
+call    0 never executed
+        -:   67:
+    #####:   68:    printf("Dati adresa:");
+call    0 never executed
+    #####:   69:    scanf("%s", address);
+call    0 never executed
+        -:   70:
+        -:   71:    char new_type[30], new_address[30], aux[30];
+        -:   72:    float new_area, new_price;
+        -:   73:
+    #####:   74:    printf("Dati tip nou:");
+call    0 never executed
+    #####:   75:    scanf("%s", new_type);
+call    0 never executed
+        -:   76:
+    #####:   77:    printf("Dati suprafata noua:");
+call    0 never executed
+    #####:   78:    scanf("%s",aux);
+call    0 never executed
+    #####:   79:    new_area = strtof(aux, NULL);
+call    0 never executed
+        -:   80:
+    #####:   81:    printf("Dati adresa noua:");
+call    0 never executed
+    #####:   82:    scanf("%s", new_address);
+call    0 never executed
+        -:   83:
+    #####:   84:    printf("Dati pret nou:");
+call    0 never executed
+    #####:   85:    scanf("%s", aux);
+call    0 never executed
+    #####:   86:    new_price = strtof(aux, NULL);
+call    0 never executed
+        -:   87:
+    #####:   88:    actualizeaza_oferta_service(l, type, address, new_type, new_area, new_address, new_price);
+call    0 never executed
+        -:   89:
+    #####:   90:}
+        -:   91:
+function sortare_dupa_pret_tip called 0 returned 0% blocks executed 0%
+    #####:   92:void sortare_dupa_pret_tip(MyList l) {
+    #####:   93:    MyList lista_sortata = sortare_dupa_pret_tip_service(l);
+    %%%%%:   93-block  0
+call    0 never executed
+    #####:   94:    printf("Lista ordonata este:\n");
+call    0 never executed
+    #####:   95:    for(int i = 0; i < lista_sortata.length; i++){
+    %%%%%:   95-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   96:        Offer o = get(&lista_sortata, i);
+    %%%%%:   96-block  0
+call    0 never executed
+    #####:   97:        printf("%s %.2f %s %.2f\n", o.type, o.area, o.address, o.price);
+call    0 never executed
+        -:   98:    }
+    #####:   99:    destroy(&lista_sortata);
+    %%%%%:   99-block  0
+call    0 never executed
+    #####:  100:}
+        -:  101:
+        -:  102:
+function filtrare_dupa_criteriu called 0 returned 0% blocks executed 0%
+    #####:  103:void filtrare_dupa_criteriu(MyList l){
+    #####:  104:    printf("Alegeti criteriul(suprafata/tip/pret):\n");
+    %%%%%:  104-block  0
+call    0 never executed
+        -:  105:    char filtru[30];
+    #####:  106:    scanf("%s", filtru);
+call    0 never executed
+    #####:  107:    if (strcmp(filtru, "suprafata") != 0 && strcmp(filtru, "tip") != 0 && strcmp(filtru, "pret") != 0){
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  107-block  0
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  107-block  1
+branch  4 never executed
+branch  5 never executed
+    #####:  108:        printf("Filtru invalid!");
+    %%%%%:  108-block  0
+call    0 never executed
+        -:  109:    }
+        -:  110:
+    #####:  111:    if(strcmp(filtru, "suprafata") == 0){
+    %%%%%:  111-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  112:        char aux[30];
+    #####:  113:        printf("Alegeti suprafata:\n");
+    %%%%%:  113-block  0
+call    0 never executed
+    #####:  114:        scanf("%s", aux);
+call    0 never executed
+    #####:  115:        MyList lista_filtrata = filtrare_dupa_criteriu_service(l, filtru, aux);
+call    0 never executed
+        -:  116:
+    #####:  117:        printf("Lista filtrata dupa %s este:\n", filtru);
+call    0 never executed
+    #####:  118:        for(int i = 0; i < lista_filtrata.length; i++){
+    %%%%%:  118-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  119:            Offer o = get(&lista_filtrata, i);
+    %%%%%:  119-block  0
+call    0 never executed
+    #####:  120:            printf("%s %.2f %s %.2f\n", o.type, o.area, o.address, o.price);
+call    0 never executed
+        -:  121:        }
+    #####:  122:        destroy(&lista_filtrata);
+    %%%%%:  122-block  0
+call    0 never executed
+        -:  123:    }
+        -:  124:
+    #####:  125:    if(strcmp(filtru, "tip") == 0){
+    %%%%%:  125-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  126:        char aux[30];
+    #####:  127:        printf("Alegeti tipul:\n");
+    %%%%%:  127-block  0
+call    0 never executed
+    #####:  128:        scanf("%s", aux);
+call    0 never executed
+    #####:  129:        MyList lista_filtrata = filtrare_dupa_criteriu_service(l, filtru, aux);
+call    0 never executed
+        -:  130:
+    #####:  131:        printf("Lista filtrata dupa %s este:\n", filtru);
+call    0 never executed
+    #####:  132:        for(int i = 0; i < lista_filtrata.length; i++){
+    %%%%%:  132-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  133:            Offer o = get(&lista_filtrata, i);
+    %%%%%:  133-block  0
+call    0 never executed
+    #####:  134:            printf("%s %.2f %s %.2f\n", o.type, o.area, o.address, o.price);
+call    0 never executed
+        -:  135:        }
+    #####:  136:        destroy(&lista_filtrata);
+    %%%%%:  136-block  0
+call    0 never executed
+        -:  137:    }
+        -:  138:
+    #####:  139:    if(strcmp(filtru, "pret") == 0){
+    %%%%%:  139-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  140:        char aux[30];
+    #####:  141:        printf("Alegeti pretul:\n");
+    %%%%%:  141-block  0
+call    0 never executed
+    #####:  142:        scanf("%s", aux);
+call    0 never executed
+    #####:  143:        MyList lista_filtrata = filtrare_dupa_criteriu_service(l, filtru, aux);
+call    0 never executed
+        -:  144:
+    #####:  145:        printf("Lista filtrata dupa %s este:\n", filtru);
+call    0 never executed
+    #####:  146:        for(int i = 0; i < lista_filtrata.length; i++){
+    %%%%%:  146-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  147:            Offer o = get(&lista_filtrata, i);
+    %%%%%:  147-block  0
+call    0 never executed
+    #####:  148:            printf("%s %.2f %s %.2f\n", o.type, o.area, o.address, o.price);
+call    0 never executed
+        -:  149:        }
+    #####:  150:        destroy(&lista_filtrata);
+    %%%%%:  150-block  0
+call    0 never executed
+        -:  151:    }
+    #####:  152:}
+        -:  153:
+function printAllOffers called 0 returned 0% blocks executed 0%
+    #####:  154:void printAllOffers(MyList *l){
+    #####:  155:    printf("Toate ofertele valabile:\n");\
+    %%%%%:  155-block  0
+call    0 never executed
+    #####:  156:    for(int i = 0; i < size(l); i++){
+    %%%%%:  156-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  157:        Offer o = get(l, i);
+    %%%%%:  157-block  0
+call    0 never executed
+    #####:  158:        printf("%s %.2f %s %.2f\n", o.type, o.area, o.address, o.price);
+call    0 never executed
+        -:  159:    }
+    #####:  160:}
+        -:  161:
+function run called 0 returned 0% blocks executed 0%
+    #####:  162:void run(){
+    #####:  163:    MyList  allOffers = createEmpty();
+    %%%%%:  163-block  0
+call    0 never executed
+    #####:  164:    int ruleaza = 1, comanda;
+        -:  165:    char aux[30];
+    #####:  166:    while(ruleaza){
+    %%%%%:  166-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  167:        printf(">>>");
+    %%%%%:  167-block  0
+call    0 never executed
+    #####:  168:        scanf("%s", aux);
+call    0 never executed
+    #####:  169:        comanda = strtol(aux, NULL, 10); // strtol converteste un string in int
+call    0 never executed
+    #####:  170:        switch(comanda){
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  171:            case 1:
+    #####:  172:                adauga_oferta(&allOffers);
+    %%%%%:  172-block  0
+call    0 never executed
+    #####:  173:                break;
+    #####:  174:            case 2:
+    #####:  175:                actualizeaza_oferta(&allOffers);
+    %%%%%:  175-block  0
+call    0 never executed
+    #####:  176:                break;
+    #####:  177:            case 3:
+    #####:  178:                sterge_oferta(&allOffers);
+    %%%%%:  178-block  0
+call    0 never executed
+    #####:  179:                break;
+    #####:  180:            case 4:
+    #####:  181:                sortare_dupa_pret_tip(allOffers);
+    %%%%%:  181-block  0
+call    0 never executed
+    #####:  182:                break;
+    #####:  183:            case 5:
+    #####:  184:                filtrare_dupa_criteriu(allOffers);
+    %%%%%:  184-block  0
+call    0 never executed
+    #####:  185:                break;
+    #####:  186:            case 6:
+    #####:  187:                printAllOffers(&allOffers);
+    %%%%%:  187-block  0
+call    0 never executed
+    #####:  188:                break;
+    #####:  189:            case 0:
+    #####:  190:                ruleaza = 0;
+    #####:  191:                break;
+    %%%%%:  191-block  0
+    #####:  192:            default:
+    #####:  193:                printf("Comanda invalida!\n");
+    %%%%%:  193-block  0
+call    0 never executed
+        -:  194:        }
+        -:  195:    }
+    #####:  196:    destroy(&allOffers);
+    %%%%%:  196-block  0
+call    0 never executed
+    #####:  197:}

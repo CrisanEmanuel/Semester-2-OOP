@@ -1,0 +1,39 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/undo.h
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\undo.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\undo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "domain.h"
+        -:    3:#include "repositoryFile.h"
+        -:    4:
+        -:    5:class ActiuneUndo {
+        -:    6:public:
+        -:    7:    virtual void doUndo() = 0;
+function _ZN11ActiuneUndoD2Ev called 0 returned 0% blocks executed 0%
+    #####:    8:    virtual ~ActiuneUndo() = default;
+        -:    9:};
+        -:   10:
+        -:   11:class UndoAdauga: public ActiuneUndo {
+        -:   12:    Disciplina disciplinaAdaugata;
+        -:   13:    Repo &repo;
+        -:   14:public:
+        -:   15:    UndoAdauga(Repo& repo, const Disciplina& d): repo { repo }, disciplinaAdaugata { d }{}
+        -:   16:    void doUndo() override;
+        -:   17:};
+        -:   18:
+        -:   19:class UndoSterge: public ActiuneUndo {
+        -:   20:    Disciplina disciplinaStearsa;
+        -:   21:    Repo &repo;
+        -:   22:public:
+        -:   23:    UndoSterge(Repo& repo, const Disciplina& d): repo { repo }, disciplinaStearsa { d }{}
+        -:   24:    void doUndo() override;
+        -:   25:};
+        -:   26:
+        -:   27:class UndoModifica: public ActiuneUndo {
+        -:   28:    Disciplina disciplinaNoua;
+        -:   29:    Disciplina disciplinaVeche;
+        -:   30:    Repo &repo;
+        -:   31:public:
+        -:   32:    UndoModifica(Repo& repo, const Disciplina& disNoua, const Disciplina& disVeche): repo { repo }, disciplinaNoua { disNoua }, disciplinaVeche { disVeche }{}
+        -:   33:    void doUndo() override;
+        -:   34:};

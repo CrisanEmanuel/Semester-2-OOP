@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Laborator_6_7"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Laborator_6_7">
+				<Option output="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Laborator_6_7" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 Laborator_6_7"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Laborator_6_7/fast">
+				<Option output="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Laborator_6_7" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 Laborator_6_7/fast"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/VectorDinamicTemplate.cpp">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/VectorDinamicTemplate.h">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/domain.cpp">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/domain.h">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/exceptions.cpp">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/exceptions.h">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/main.cpp">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/repository.cpp">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/repository.h">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/service.cpp">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/service.h">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/tests.cpp">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/tests.h">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/ui.cpp">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/ui.h">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/validare.cpp">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/validare.h">
+			<Option target="Laborator_6_7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/EMANUEL/Desktop/OOP/Laborator_6_7/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

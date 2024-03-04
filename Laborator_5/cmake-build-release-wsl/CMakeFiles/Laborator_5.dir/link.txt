@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/Laborator_5.dir/main.c.o CMakeFiles/Laborator_5.dir/domain.c.o CMakeFiles/Laborator_5.dir/mysort.c.o CMakeFiles/Laborator_5.dir/service.c.o CMakeFiles/Laborator_5.dir/repository.c.o -o Laborator_5 

@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/Laborator_2_4.dir/main.c.o CMakeFiles/Laborator_2_4.dir/repo.c.o CMakeFiles/Laborator_2_4.dir/domain.c.o CMakeFiles/Laborator_2_4.dir/service.c.o CMakeFiles/Laborator_2_4.dir/tests.c.o CMakeFiles/Laborator_2_4.dir/validate.c.o CMakeFiles/Laborator_2_4.dir/ui.c.o -o Laborator_2_4 

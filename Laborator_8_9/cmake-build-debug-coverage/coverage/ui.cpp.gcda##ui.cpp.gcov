@@ -1,0 +1,1501 @@
+        -:    0:Source:C:/Users/EMANUEL/Desktop/OOP/Laborator_8_9/ui.cpp
+        -:    0:Graph:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\EMANUEL\Desktop\OOP\Laborator_8_9\cmake-build-debug-coverage\CMakeFiles\Laborator_8_9.dir\ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "ui.h"
+        -:    2:
+        -:    3:using std::cin;
+        -:    4:using std::cout;
+        -:    5:using std::string;
+        -:    6:
+function _ZN2Ui5addUiEv called 0 returned 0% blocks executed 0%
+    #####:    7:void Ui::addUi() {
+    #####:    8:    string denumire, tip, profesor, character;
+    %%%%%:    8-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:    9:    int ore;
+        -:   10:
+    #####:   11:    cout << "Denumire: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   12:    cin >> denumire;
+    %%%%%:   12-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   13:
+    #####:   14:    cout << "Numar ore: ";
+    %%%%%:   14-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   15:    cin >> ore;
+    %%%%%:   15-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   16:
+    #####:   17:    cout << "Tip: ";
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   18:    cin >> tip;
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   19:
+    #####:   20:    cout << "Profesor: ";
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   21:    cin >> profesor;
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   22:
+    #####:   23:    service.addService(denumire, ore, tip, profesor);
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   24:    cout << "Disciplina adaugata!\n";
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   25:}
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    $$$$$:   25-block  1
+call    4 never executed
+    $$$$$:   25-block  2
+call    5 never executed
+    $$$$$:   25-block  3
+call    6 never executed
+    $$$$$:   25-block  4
+call    7 never executed
+        -:   26:
+function _ZN2Ui8deleteUiEv called 0 returned 0% blocks executed 0%
+    #####:   27:void Ui::deleteUi() {
+    #####:   28:    string denumire;
+    %%%%%:   28-block  0
+call    0 never executed
+    #####:   29:    cout << "Denumire: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   30:    cin >> denumire;
+    %%%%%:   30-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   31:    service.deleteService(denumire);
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:    cout << "Disciplina stearsa cu succes!\n";
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:}
+    %%%%%:   33-block  0
+call    0 never executed
+    $$$$$:   33-block  1
+call    1 never executed
+        -:   34:
+function _ZN2Ui8updateUiEv called 0 returned 0% blocks executed 0%
+    #####:   35:void Ui::updateUi() {
+    #####:   36:    string denumire, denumireNoua, tipNou, profesorNou;
+    %%%%%:   36-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:   37:    int nrOreNou;
+        -:   38:
+    #####:   39:    cout << "Denumire: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   40:    cin >> denumire;
+    %%%%%:   40-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   41:
+    #####:   42:    cout << "Denumire noua: ";
+    %%%%%:   42-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   43:    cin >> denumireNoua;
+    %%%%%:   43-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   44:
+    #####:   45:    cout << "Numar ore nou: ";
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   46:    cin >> nrOreNou;
+    %%%%%:   46-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   47:
+    #####:   48:    cout << "Tip nou: ";
+    %%%%%:   48-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   49:    cin >> tipNou;
+    %%%%%:   49-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   50:
+    #####:   51:    cout << "Profesor nou: ";
+    %%%%%:   51-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   52:    cin >> profesorNou;
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   53:
+    #####:   54:    service.updateService(denumire, denumireNoua, nrOreNou, tipNou, profesorNou);
+    %%%%%:   54-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   55:    cout << "Disciplina modificata cu succes!\n";
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   56:}
+    %%%%%:   56-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    $$$$$:   56-block  1
+call    4 never executed
+    $$$$$:   56-block  2
+call    5 never executed
+    $$$$$:   56-block  3
+call    6 never executed
+    $$$$$:   56-block  4
+call    7 never executed
+        -:   57:
+function _ZN2Ui7printUiERKSt6vectorI10DisciplinaSaIS1_EE called 0 returned 0% blocks executed 0%
+    #####:   58:void Ui::printUi(const vector<Disciplina> &discipline) {
+    #####:   59:    if (discipline.empty()) cout << "Nu existe discipline in aplicatie!\n";
+    %%%%%:   59-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   59-block  1
+call    3 never executed
+        -:   60:    else {
+    #####:   61:        cout << "Disciplinele sunt:\n";
+    %%%%%:   61-block  0
+call    0 never executed
+    #####:   62:        for (const auto& disciplina : discipline) {
+call    0 never executed
+call    1 never executed
+    %%%%%:   62-block  0
+call    2 never executed
+    %%%%%:   62-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   63:            cout << "Denumire: " << disciplina.getDenumire() << ' ';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   63-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   63-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   63-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   63-block  3
+call   12 never executed
+    $$$$$:   63-block  4
+call   13 never executed
+    $$$$$:   63-block  5
+    #####:   64:            cout << "Ore: " << disciplina.getOrePeSaptamana() << ' ';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   64-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   64-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   64-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:   65:            cout << "Tip: " << disciplina.getTip() << ' ';
+    %%%%%:   65-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   65-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   65-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   65-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   65-block  4
+call   12 never executed
+    $$$$$:   65-block  5
+call   13 never executed
+    $$$$$:   65-block  6
+    #####:   66:            cout << "Profesor: " << disciplina.getProfesor() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   66-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   66-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   66-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   66-block  3
+call   12 never executed
+call   13 never executed
+    $$$$$:   66-block  4
+call   14 never executed
+    $$$$$:   66-block  5
+        -:   67:        }
+    #####:   68:        cout << "Sfarsit lista\n";
+    %%%%%:   68-block  0
+call    0 never executed
+        -:   69:    }
+    #####:   70:}
+    %%%%%:   70-block  0
+        -:   71:
+function _ZN2Ui8searchUiEv called 0 returned 0% blocks executed 0%
+    #####:   72:void Ui::searchUi(){
+    #####:   73:    string denumire;
+    %%%%%:   73-block  0
+call    0 never executed
+    #####:   74:    cout << "Denumire: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   75:    cin >> denumire;
+    %%%%%:   75-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   76:
+    #####:   77:    Disciplina disciplinaCautata = service.searchService(denumire);
+    %%%%%:   77-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   78:
+    #####:   79:    cout << "Denumire: " << disciplinaCautata.getDenumire() << ' ';
+    %%%%%:   79-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   79-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   79-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   79-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   79-block  4
+call   12 never executed
+    $$$$$:   79-block  5
+call   13 never executed
+    $$$$$:   79-block  6
+    #####:   80:    cout << "Ore: " << disciplinaCautata.getOrePeSaptamana() << ' ';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   80-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   80-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   80-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:   81:    cout << "Tip: " << disciplinaCautata.getTip() << ' ';
+    %%%%%:   81-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   81-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   81-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   81-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   81-block  4
+call   12 never executed
+    $$$$$:   81-block  5
+call   13 never executed
+    $$$$$:   81-block  6
+    #####:   82:    cout << "Profesor: " << disciplinaCautata.getProfesor() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   82-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   82-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   82-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   82-block  3
+call   12 never executed
+    $$$$$:   82-block  4
+call   13 never executed
+    $$$$$:   82-block  5
+    #####:   83:}
+call    0 never executed
+call    1 never executed
+    $$$$$:   83-block  0
+call    2 never executed
+    $$$$$:   83-block  1
+call    3 never executed
+        -:   84:
+function _ZN2Ui8filterUiEv called 0 returned 0% blocks executed 0%
+    #####:   85:void Ui::filterUi(){
+    #####:   86:    string criteriu;
+    %%%%%:   86-block  0
+call    0 never executed
+    #####:   87:    cout << "Filtrare dupa ore(o)/ profesor(p): ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   88:    cin >> criteriu;
+    %%%%%:   88-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   89:    if(criteriu == "o"){
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   90:        int nrOre;
+    #####:   91:        cout << "Numar ore: ";
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:        cin >> nrOre;
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   93:        if (service.filterNrOre(nrOre).empty())
+    %%%%%:   93-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   93-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   94:            cout << "Nu exista discipline cautate!\n";
+    %%%%%:   94-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   95:        else printUi(service.filterNrOre(nrOre));
+    %%%%%:   95-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   95-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   95-block  2
+call    6 never executed
+    $$$$$:   95-block  3
+call    7 never executed
+    $$$$$:   95-block  4
+    #####:   96:    }else if(criteriu == "p") {
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   97:            string profesor;
+    %%%%%:   97-block  0
+call    0 never executed
+    #####:   98:            cout << "Profesor: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   99:            cin >> profesor;
+    %%%%%:   99-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  100:            if (service.filterProfesor(profesor).empty())
+    %%%%%:  100-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  100-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  101:                cout << "Nu exista discipline cautate!\n";
+    %%%%%:  101-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  102:            else printUi(service.filterProfesor(profesor));
+    %%%%%:  102-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  102-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  102-block  2
+call    6 never executed
+    $$$$$:  102-block  3
+call    7 never executed
+    $$$$$:  102-block  4
+    #####:  103:        }
+    %%%%%:  103-block  0
+call    0 never executed
+    $$$$$:  103-block  1
+call    1 never executed
+        -:  104:    else {
+    #####:  105:        cout << "Criteriu invalid!\n";
+    %%%%%:  105-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  106:    }
+    #####:  107:}
+    %%%%%:  107-block  0
+call    0 never executed
+    $$$$$:  107-block  1
+call    1 never executed
+        -:  108:
+function _ZN2Ui6sortUiEv called 0 returned 0% blocks executed 0%
+    #####:  109:void Ui::sortUi() {
+    #####:  110:    string criteriu;
+    %%%%%:  110-block  0
+call    0 never executed
+    #####:  111:    cout << "Sortare dupa denumire(d)/ ore(o)/ tip+profesor(tp): ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  112:    cin >> criteriu;
+    %%%%%:  112-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  113:    if (criteriu == "d"){
+    %%%%%:  113-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  114:        printUi(service.sortByDenumire());
+    %%%%%:  114-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  114-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  114-block  2
+call    6 never executed
+    $$$$$:  114-block  3
+call    7 never executed
+    $$$$$:  114-block  4
+    #####:  115:    }else if (criteriu == "o"){
+    %%%%%:  115-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  116:        printUi(service.sortByNrOre());
+    %%%%%:  116-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  116-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  116-block  2
+call    6 never executed
+    $$$$$:  116-block  3
+call    7 never executed
+    $$$$$:  116-block  4
+    #####:  117:    }else if (criteriu == "tp"){
+    %%%%%:  117-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  118:        printUi(service.sortByTipProfesor());
+    %%%%%:  118-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  118-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  118-block  2
+call    6 never executed
+    $$$$$:  118-block  3
+call    7 never executed
+    $$$$$:  118-block  4
+        -:  119:    }else{
+    #####:  120:        cout << "Criteriu invalid!\n";
+    %%%%%:  120-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  121:    }
+    #####:  122:}
+    %%%%%:  122-block  0
+call    0 never executed
+    $$$$$:  122-block  1
+call    1 never executed
+        -:  123:
+function _ZN2Ui16createContractUiEv called 0 returned 0% blocks executed 0%
+    #####:  124:void Ui::createContractUi() {
+    #####:  125:    if (service.getAll().empty()){
+    %%%%%:  125-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  125-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  126:        cout << "Nu exista discipline in aplicatie!\n";
+    %%%%%:  126-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  127:        return;
+    %%%%%:  127-block  0
+    %%%%%:  127-block  1
+        -:  128:    }
+        -:  129:
+    #####:  130:    if (!service.getAllDisciplineFromContractService().empty()){
+    %%%%%:  130-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  130-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  131:        cout << "Goliti contractul curent pentru a creea altul!\n";
+    %%%%%:  131-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  132:        return;
+    %%%%%:  132-block  0
+        -:  133:    }
+        -:  134:
+    #####:  135:    vector<string> denumiri;
+    %%%%%:  135-block  0
+call    0 never executed
+    #####:  136:    string denumireDisciplina;
+call    0 never executed
+        -:  137:
+    #####:  138:    cout << "Alegeti disciplinele: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  139:    cin.get();
+    %%%%%:  139-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  140:    while(cin.peek() != '\n' && cin >> denumireDisciplina){
+    %%%%%:  140-block  0
+    %%%%%:  140-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  140-block  2
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  140-block  3
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  140-block  4
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  140-block  5
+branch 11 never executed
+branch 12 never executed
+    %%%%%:  140-block  6
+    %%%%%:  140-block  7
+    %%%%%:  140-block  8
+branch 13 never executed
+branch 14 never executed
+    #####:  141:        denumiri.push_back(denumireDisciplina);
+    %%%%%:  141-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  142:    }
+        -:  143:
+    #####:  144:    auto allDiscipline = service.getAll();
+    %%%%%:  144-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  145:    for (const string& den: denumiri) {
+    %%%%%:  145-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  145-block  1
+call    2 never executed
+    %%%%%:  145-block  2
+call    3 never executed
+    %%%%%:  145-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+function _ZZN2Ui16createContractUiEvENKUlRK10DisciplinaE_clES2_ called 0 returned 0% blocks executed 0%
+    #####:  146:        auto it = std::find_if(allDiscipline.begin(), allDiscipline.end(), [den] (const Disciplina& dis) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  146-block  0
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  146-block  1
+call    8 never executed
+    $$$$$:  146-block  2
+call    9 never executed
+    $$$$$:  146-block  3
+    #####:  147:            return den == dis.getDenumire();
+    %%%%%:  147-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  148:        });
+    #####:  149:        if (it == allDiscipline.end()){
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  150:            cout << "Ati introdus discipline inexistente!\n";
+    %%%%%:  150-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  151:            return;
+    %%%%%:  151-block  0
+        -:  152:        }
+        -:  153:    }
+        -:  154:
+    #####:  155:    service.addToContractService(denumiri);
+    %%%%%:  155-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  156:    cout << "Contract creat cu succes!\n";
+    %%%%%:  156-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  157:    cout << "Nr discipline contract: ";
+    %%%%%:  157-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  158:    cout << service.nrDisciplineContract() << std::endl;
+    %%%%%:  158-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  158-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  158-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  159:}
+    %%%%%:  159-block  0
+    %%%%%:  159-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  159-block  2
+    %%%%%:  159-block  3
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  159-block  4
+    %%%%%:  159-block  5
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  159-block  6
+call    9 never executed
+    $$$$$:  159-block  7
+call   10 never executed
+    $$$$$:  159-block  8
+call   11 never executed
+        -:  160:
+function _ZN2Ui15emptyContractUiEv called 0 returned 0% blocks executed 0%
+    #####:  161:void Ui::emptyContractUi() {
+    #####:  162:    if (service.getAll().empty()) {
+    %%%%%:  162-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  163:        cout << "Nu exista discipline in aplicatie!\n";
+    %%%%%:  163-block  0
+call    0 never executed
+    #####:  164:        return;
+        -:  165:    }
+    #####:  166:    service.emptyContractService();
+    %%%%%:  166-block  0
+call    0 never executed
+    #####:  167:    cout << "Contractul a fost golit.\n";
+call    0 never executed
+    #####:  168:    cout << "Nr discipline contract: ";
+call    0 never executed
+    #####:  169:    cout << service.nrDisciplineContract() << std::endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:  170:}
+        -:  171:
+function _ZN2Ui18generateContractUiEv called 0 returned 0% blocks executed 0%
+    #####:  172:void Ui::generateContractUi() {
+    #####:  173:    if (service.getAll().empty()) {
+    %%%%%:  173-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  173-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  174:        cout << "Nu exista discipline in aplicatie!\n";
+    %%%%%:  174-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  175:        return;
+    %%%%%:  175-block  0
+    %%%%%:  175-block  1
+        -:  176:    }
+        -:  177:
+    #####:  178:    cout << "Introduceti numarul de dicipline: ";
+    %%%%%:  178-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  179:    int nrDiscipline;
+    #####:  180:    cin >> nrDiscipline;
+    %%%%%:  180-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  181:    if (nrDiscipline > service.getAll().size()) {
+    %%%%%:  181-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  181-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  182:        cout << "Numar discipline prea mare!\n";
+    %%%%%:  182-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  183:        return;
+    %%%%%:  183-block  0
+        -:  184:    }
+    #####:  185:    service.generateRandomContractService(nrDiscipline);
+    %%%%%:  185-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  186:    cout << "Contract generat cu succes!\n";
+    %%%%%:  186-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  187:    cout << "Nr discipline contract: ";
+    %%%%%:  187-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  188:    cout << service.nrDisciplineContract() << std::endl;
+    %%%%%:  188-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  188-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  188-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        -:  189:}
+        -:  190:
+function _ZN2Ui15printContractUiERKSt6vectorI10DisciplinaSaIS1_EE called 0 returned 0% blocks executed 0%
+    #####:  191:void Ui::printContractUi(const vector<Disciplina>& discipline) {
+    #####:  192:    if (discipline.empty()) cout << "Nu exista discipline in contract!\n";
+    %%%%%:  192-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  192-block  1
+call    3 never executed
+        -:  193:    else {
+    #####:  194:        cout << "Contractul este:\n";
+    %%%%%:  194-block  0
+call    0 never executed
+    #####:  195:        for (const auto& disciplina : discipline) {
+call    0 never executed
+call    1 never executed
+    %%%%%:  195-block  0
+call    2 never executed
+    %%%%%:  195-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  196:            cout << "Denumire: " << disciplina.getDenumire() << ' ';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  196-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  196-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  196-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  196-block  3
+call   12 never executed
+    $$$$$:  196-block  4
+call   13 never executed
+    $$$$$:  196-block  5
+    #####:  197:            cout << "Ore: " << disciplina.getOrePeSaptamana() << ' ';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  197-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  197-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  197-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:  198:            cout << "Tip: " << disciplina.getTip() << ' ';
+    %%%%%:  198-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  198-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  198-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  198-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  198-block  4
+call   12 never executed
+    $$$$$:  198-block  5
+call   13 never executed
+    $$$$$:  198-block  6
+    #####:  199:            cout << "Profesor: " << disciplina.getProfesor() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  199-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  199-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  199-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  199-block  3
+call   12 never executed
+call   13 never executed
+    $$$$$:  199-block  4
+call   14 never executed
+    $$$$$:  199-block  5
+        -:  200:        }
+        -:  201:    }
+    #####:  202:    cout << "Nr discipline contract: ";
+    %%%%%:  202-block  0
+call    0 never executed
+    #####:  203:    cout << service.nrDisciplineContract() << std::endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  204:}
+        -:  205:
+function _ZN2Ui14exportToFileUiEv called 0 returned 0% blocks executed 0%
+    #####:  206:void Ui::exportToFileUi() {
+    #####:  207:    if(service.nrDisciplineContract() == 0){
+    %%%%%:  207-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  207-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:  208:        cout << "Nu exista discipline in contract!\n";
+    %%%%%:  208-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  209:        return;
+    %%%%%:  209-block  0
+    %%%%%:  209-block  1
+        -:  210:    }
+        -:  211:
+    #####:  212:    string fileName;
+    %%%%%:  212-block  0
+call    0 never executed
+    #####:  213:    cout << "Alegeti fisierul: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  214:    cin >> fileName;
+    %%%%%:  214-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  215:
+    #####:  216:    if(fileName.substr(fileName.find_last_of('.') + 1) == "csv"){
+    %%%%%:  216-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  216-block  1
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  217:        service.exportContractToFileCSVService(fileName);
+    %%%%%:  217-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  218:        cout << "Contractul a fost salvat cu succes!\n";
+    %%%%%:  218-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  219:    }
+    #####:  220:    else if(fileName.substr(fileName.find_last_of('.') + 1) == "html") {
+    %%%%%:  220-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  220-block  1
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:  221:        service.exportContractToFileHTMLService(fileName);
+    %%%%%:  221-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  222:        cout << "Contractul a fost salvat cu succes!\n";
+    %%%%%:  222-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  223:    }
+        -:  224:    else{
+    #####:  225:        cout << "Extensie invalida de fisier!\n";
+    %%%%%:  225-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  226:        return;
+    %%%%%:  226-block  0
+        -:  227:    }
+        -:  228:
+    #####:  229:    cout << "Nr discipline contract: ";
+    %%%%%:  229-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  230:    cout << service.nrDisciplineContract() << std::endl;
+    %%%%%:  230-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  230-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  230-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  231:}
+    %%%%%:  231-block  0
+    %%%%%:  231-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  231-block  2
+call    3 never executed
+        -:  232:
+function _ZN2Ui6undoUiEv called 0 returned 0% blocks executed 0%
+    #####:  233:void Ui::undoUi() {
+    #####:  234:    service.undoService();
+    %%%%%:  234-block  0
+call    0 never executed
+    #####:  235:}
+        -:  236:
+function _ZN2Ui8funcNouaEv called 0 returned 0% blocks executed 0%
+    #####:  237:void Ui::funcNoua() {
+    #####:  238:    auto map = service.funcNoua();
+    %%%%%:  238-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  239:    cout << "Tip Aparitii\n";
+    %%%%%:  239-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  240:    for(const auto& d: map)
+    %%%%%:  240-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  240-block  1
+call    2 never executed
+    %%%%%:  240-block  2
+call    3 never executed
+    %%%%%:  240-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+        -:  241:    {
+    #####:  242:        cout << d.first << "       " << d.second << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  242-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  242-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  242-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+        -:  243:    }
+    #####:  244:}
+    %%%%%:  244-block  0
+call    0 never executed
+    $$$$$:  244-block  1
+call    1 never executed
+        -:  245:
+function _ZN2Ui4menuEv called 0 returned 0% blocks executed 0%
+    #####:  246:void Ui::menu() {
+    #####:  247:    cout << "_________ MENIU _________\n";
+    %%%%%:  247-block  0
+call    0 never executed
+    #####:  248:    cout << "1.Adaugare\n";
+call    0 never executed
+    #####:  249:    cout << "2.Stergere\n";
+call    0 never executed
+    #####:  250:    cout << "3.Modificare\n";
+call    0 never executed
+    #####:  251:    cout << "4.Afisare\n";
+call    0 never executed
+    #####:  252:    cout << "5.Cautare\n";
+call    0 never executed
+    #####:  253:    cout << "6.Filtrare\n";
+call    0 never executed
+    #####:  254:    cout << "7.Sortare\n";
+call    0 never executed
+    #####:  255:    cout << "8.Creare contract\n";
+call    0 never executed
+    #####:  256:    cout << "9.Golire contract\n";
+call    0 never executed
+    #####:  257:    cout << "10.Generare contract\n";
+call    0 never executed
+    #####:  258:    cout << "11.Afisare contract\n";
+call    0 never executed
+    #####:  259:    cout << "12.Salvare contract in fisier\n";
+call    0 never executed
+    #####:  260:    cout << "13.Undo\n";
+call    0 never executed
+    #####:  261:    cout << "_________________________\n";
+call    0 never executed
+    #####:  262:}
+        -:  263:
+function _ZN2Ui5runUiEv called 0 returned 0% blocks executed 0%
+    #####:  264:void Ui::runUi() {
+        -:  265:    while(true){
+    #####:  266:        int cmd = 0;
+    #####:  267:        cout << ">>>";
+    %%%%%:  267-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  268:        cin >> cmd;
+    %%%%%:  268-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  269:        if (cmd == 0){
+    %%%%%:  269-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  270:            break;
+    %%%%%:  270-block  0
+        -:  271:        }
+        -:  272:        try {
+    #####:  273:            switch (cmd) {
+    %%%%%:  273-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+branch  6 never executed
+branch  7 never executed
+branch  8 never executed
+branch  9 never executed
+branch 10 never executed
+branch 11 never executed
+branch 12 never executed
+branch 13 never executed
+branch 14 never executed
+branch 15 never executed
+    #####:  274:                case 1:
+    #####:  275:                    addUi();
+    %%%%%:  275-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  276:                    break;
+    %%%%%:  276-block  0
+    #####:  277:                case 2:
+    #####:  278:                    deleteUi();
+    %%%%%:  278-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  279:                    break;
+    %%%%%:  279-block  0
+    #####:  280:                case 3:
+    #####:  281:                    updateUi();
+    %%%%%:  281-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  282:                    break;
+    %%%%%:  282-block  0
+    #####:  283:                case 4:
+    #####:  284:                    printUi(service.getAll());
+    %%%%%:  284-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  284-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  284-block  2
+call    6 never executed
+    $$$$$:  284-block  3
+call    7 never executed
+    $$$$$:  284-block  4
+    #####:  285:                    break;
+    #####:  286:                case 5:
+    #####:  287:                    searchUi();
+    %%%%%:  287-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  288:                    break;
+    %%%%%:  288-block  0
+    #####:  289:                case 6:
+    #####:  290:                    filterUi();
+    %%%%%:  290-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  291:                    break;
+    %%%%%:  291-block  0
+    #####:  292:                case 7:
+    #####:  293:                    sortUi();
+    %%%%%:  293-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  294:                    break;
+    %%%%%:  294-block  0
+    #####:  295:                case 8:
+    #####:  296:                    createContractUi();
+    %%%%%:  296-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  297:                    break;
+    %%%%%:  297-block  0
+    #####:  298:                case 9:
+    #####:  299:                    emptyContractUi();
+    %%%%%:  299-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  300:                    break;
+    %%%%%:  300-block  0
+    #####:  301:                case 10:
+    #####:  302:                    generateContractUi();
+    %%%%%:  302-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  303:                    break;
+    %%%%%:  303-block  0
+    #####:  304:                case 11:
+    #####:  305:                    printContractUi(service.getAllDisciplineFromContractService());
+    %%%%%:  305-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  305-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  305-block  2
+call    6 never executed
+    $$$$$:  305-block  3
+call    7 never executed
+    $$$$$:  305-block  4
+    #####:  306:                    break;
+    #####:  307:                case 12:
+    #####:  308:                    exportToFileUi();
+    %%%%%:  308-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  309:                    break;
+    %%%%%:  309-block  0
+    #####:  310:                case 13:
+    #####:  311:                    undoUi();
+    %%%%%:  311-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  312:                    break;
+    %%%%%:  312-block  0
+    #####:  313:                case 20:
+    #####:  314:                    funcNoua();
+    %%%%%:  314-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  315:                    break;
+    %%%%%:  315-block  0
+    #####:  316:                case 0:
+    #####:  317:                    return;
+    %%%%%:  317-block  0
+    #####:  318:                default:
+    #####:  319:                    cout << "Comanda invalida!\n";
+    %%%%%:  319-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  320:            }
+    =====:  321:        }catch (RepoException &ex){
+    $$$$$:  321-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  321-block  1
+call    4 never executed
+    =====:  322:            cout << ex.getMesaj();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  322-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  322-block  1
+call    6 never executed
+    $$$$$:  322-block  2
+call    7 never executed
+    $$$$$:  322-block  3
+    =====:  323:        }catch (ValidateException& ex){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  323-block  0
+call    3 never executed
+    $$$$$:  323-block  1
+call    4 never executed
+    =====:  324:            cout << ex;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  325:            cout << "\n";
+    $$$$$:  325-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  326:        }catch (ServiceException &ex){
+    $$$$$:  326-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  326-block  1
+call    3 never executed
+    $$$$$:  326-block  2
+call    4 never executed
+    =====:  327:            cout << ex.getMesaj();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  327-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  327-block  1
+call    6 never executed
+    $$$$$:  327-block  2
+call    7 never executed
+    $$$$$:  327-block  3
+    =====:  328:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  328-block  0
+call    3 never executed
+    #####:  329:    }
+    %%%%%:  329-block  0
+        -:  330:}
